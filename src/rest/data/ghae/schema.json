@@ -13730,7 +13730,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Returns a token that you can pass to the <code>config</code> script. The token expires after one hour.</p>\n<p>You must authenticate using an access token with the <code>admin:org</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>\n<p>Example using registration token: </p>\n<p>Configure your self-hosted runner, replacing <code>TOKEN</code> with the registration token provided by this endpoint.</p>\n<pre><code>./config.sh --url https://github.com/octo-org --token TOKEN\n</code></pre>",
+        "descriptionHTML": "<p>Returns a token that you can pass to the <code>config</code> script. The token expires after one hour.</p>\n<p>You must authenticate using an access token with the <code>admin:org</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>\n<p>Example using registration token:</p>\n<p>Configure your self-hosted runner, replacing <code>TOKEN</code> with the registration token provided by this endpoint.</p>\n<pre><code>./config.sh --url https://github.com/octo-org --token TOKEN\n</code></pre>",
         "statusCodes": [
           {
             "httpStatusCode": "201",
@@ -15672,7 +15672,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Lists all self-hosted runners configured in a repository.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>",
+        "descriptionHTML": "<p>Lists all self-hosted runners configured in a repository.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>",
         "statusCodes": [
           {
             "httpStatusCode": "200",
@@ -15795,7 +15795,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Lists binaries for the runner application that you can download and run.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>",
+        "descriptionHTML": "<p>Lists binaries for the runner application that you can download and run.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>",
         "statusCodes": [
           {
             "httpStatusCode": "200",
@@ -17296,7 +17296,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Returns a token that you can pass to the <code>config</code> script. The token\nexpires after one hour.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>\n<p>Example using registration token: </p>\n<p>Configure your self-hosted runner, replacing <code>TOKEN</code> with the registration token provided\nby this endpoint.</p>\n<p><code>config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN</code></p>",
+        "descriptionHTML": "<p>Returns a token that you can pass to the <code>config</code> script. The token\nexpires after one hour.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>\n<p>Example using registration token:</p>\n<p>Configure your self-hosted runner, replacing <code>TOKEN</code> with the registration token provided\nby this endpoint.</p>\n<p><code>config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN</code></p>",
         "statusCodes": [
           {
             "httpStatusCode": "201",
@@ -18797,7 +18797,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Returns a token that you can pass to remove a self-hosted runner from\na repository. The token expires after one hour.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>\n<p>Example using remove token:</p>\n<p>To remove your self-hosted runner from a repository, replace TOKEN with\nthe remove token provided by this endpoint.</p>\n<p><code>config.sh remove --token TOKEN</code></p>",
+        "descriptionHTML": "<p>Returns a token that you can pass to remove a self-hosted runner from\na repository. The token expires after one hour.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>\n<p>Example using remove token:</p>\n<p>To remove your self-hosted runner from a repository, replace TOKEN with\nthe remove token provided by this endpoint.</p>\n<p><code>config.sh remove --token TOKEN</code></p>",
         "statusCodes": [
           {
             "httpStatusCode": "201",
@@ -18974,7 +18974,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Gets a specific self-hosted runner configured in a repository.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>",
+        "descriptionHTML": "<p>Gets a specific self-hosted runner configured in a repository.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>",
         "statusCodes": [
           {
             "httpStatusCode": "200",
@@ -19039,7 +19039,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>",
+        "descriptionHTML": "<p>Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nGitHub Apps must have the <code>administration</code> permission for repositories and the <code>organization_self_hosted_runners</code> permission for organizations.\nAuthenticated users must have admin access to repositories or organizations, or the <code>manage_runners:enterprise</code> scope for enterprises, to use these endpoints.</p>",
         "statusCodes": [
           {
             "httpStatusCode": "204",
@@ -29053,7 +29053,85 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Cancels a workflow run using its <code>id</code>.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nIf the repository is private, you must use an access token with the <code>repo</code> scope.\nGitHub Apps must have the <code>actions:write</code> permission to use this endpoint.</p>",
+        "descriptionHTML": "<p>Cancels a workflow run using its <code>id</code>.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nGitHub Apps must have the <code>actions:write</code> permission to use this endpoint.</p>",
+        "statusCodes": [
+          {
+            "httpStatusCode": "202",
+            "description": "<p>Accepted</p>"
+          },
+          {
+            "httpStatusCode": "409",
+            "description": "<p>Conflict</p>"
+          }
+        ]
+      },
+      {
+        "serverUrl": "https://HOSTNAME/api/v3",
+        "verb": "post",
+        "requestPath": "/repos/{owner}/{repo}/actions/runs/{run_id}/force-cancel",
+        "title": "Force cancel a workflow run",
+        "category": "actions",
+        "subcategory": "workflow-runs",
+        "parameters": [
+          {
+            "name": "owner",
+            "description": "<p>The account owner of the repository. The name is not case sensitive.</p>",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "description": "<p>The name of the repository without the <code>.git</code> extension. The name is not case sensitive.</p>",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "run_id",
+            "description": "<p>The unique identifier of the workflow run.</p>",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "bodyParameters": [],
+        "enabledForGitHubApps": true,
+        "codeExamples": [
+          {
+            "key": "default",
+            "request": {
+              "description": "Example",
+              "acceptHeader": "application/vnd.github.v3+json",
+              "parameters": {
+                "owner": "OWNER",
+                "repo": "REPO",
+                "run_id": "RUN_ID"
+              }
+            },
+            "response": {
+              "statusCode": "202",
+              "contentType": "application/json",
+              "description": "<p>Response</p>",
+              "example": null,
+              "schema": {
+                "title": "Empty Object",
+                "description": "An object without any properties.",
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+              }
+            }
+          }
+        ],
+        "previews": [],
+        "descriptionHTML": "<p>Cancels a workflow run and bypasses conditions that would otherwise cause a workflow execution to continue, such as an <code>always()</code> condition on a job.\nYou should only use this endpoint to cancel a workflow run when the workflow run is not responding to <a href=\"/rest/actions/workflow-runs#cancel-a-workflow-run\"><code>POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel</code></a>.</p>\n<p>You must authenticate using an access token with the <code>repo</code> scope to use this endpoint.\nGitHub Apps must have the <code>actions:write</code> permission to use this endpoint.</p>",
         "statusCodes": [
           {
             "httpStatusCode": "202",
@@ -136411,7 +136489,7 @@
             "type": "boolean",
             "name": "read_only",
             "in": "body",
-            "description": "<p>If <code>true</code>, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.  </p>\n<p>Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/articles/repository-permission-levels-for-an-organization/\">Repository permission levels for an organization</a>\" and \"<a href=\"https://docs.github.com/github-ae@latest/articles/permission-levels-for-a-user-account-repository/\">Permission levels for a user account repository</a>.\"</p>"
+            "description": "<p>If <code>true</code>, the key will only be able to read repository contents. Otherwise, the key will be able to read and write.</p>\n<p>Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/articles/repository-permission-levels-for-an-organization/\">Repository permission levels for an organization</a>\" and \"<a href=\"https://docs.github.com/github-ae@latest/articles/permission-levels-for-a-user-account-repository/\">Permission levels for a user account repository</a>.\"</p>"
           }
         ],
         "enabledForGitHubApps": true,
@@ -139817,6 +139895,7 @@
                       {
                         "id": 3755,
                         "node_id": "MDQ6R2F0ZTM3NTU=",
+                        "prevent_self_review": false,
                         "type": "required_reviewers",
                         "reviewers": [
                           {
@@ -139993,6 +140072,13 @@
                                     "type": "string",
                                     "examples": [
                                       "MDQ6R2F0ZTM3NTU="
+                                    ]
+                                  },
+                                  "prevent_self_review": {
+                                    "type": "boolean",
+                                    "description": "Whether deployments to this environment can be approved by the user who created the deployment.",
+                                    "examples": [
+                                      false
                                     ]
                                   },
                                   "type": {
@@ -140553,6 +140639,7 @@
                   {
                     "id": 3755,
                     "node_id": "MDQ6R2F0ZTM3NTU=",
+                    "prevent_self_review": false,
                     "type": "required_reviewers",
                     "reviewers": [
                       {
@@ -140715,6 +140802,13 @@
                               "type": "string",
                               "examples": [
                                 "MDQ6R2F0ZTM3NTU="
+                              ]
+                            },
+                            "prevent_self_review": {
+                              "type": "boolean",
+                              "description": "Whether deployments to this environment can be approved by the user who created the deployment.",
+                              "examples": [
+                                false
                               ]
                             },
                             "type": {
@@ -141339,6 +141433,7 @@
                   {
                     "id": 3755,
                     "node_id": "MDQ6R2F0ZTM3NTU=",
+                    "prevent_self_review": false,
                     "type": "required_reviewers",
                     "reviewers": [
                       {
@@ -141501,6 +141596,13 @@
                               "type": "string",
                               "examples": [
                                 "MDQ6R2F0ZTM3NTU="
+                              ]
+                            },
+                            "prevent_self_review": {
+                              "type": "boolean",
+                              "description": "Whether deployments to this environment can be approved by the user who created the deployment.",
+                              "examples": [
+                                false
                               ]
                             },
                             "type": {
@@ -148098,7 +148200,7 @@
         "parameters": [
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -148216,7 +148318,7 @@
         "parameters": [
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -148381,7 +148483,7 @@
         "parameters": [
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -148426,7 +148528,7 @@
         "parameters": [
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -168627,12 +168729,12 @@
               {
                 "type": "string or null",
                 "name": "sha",
-                "description": "<p>The SHA1 checksum ID of the object in the tree. Also called <code>tree.sha</code>. If the value is <code>null</code> then the file will be deleted.  </p>\n<p><strong>Note:</strong> Use either <code>tree.sha</code> or <code>content</code> to specify the contents of the entry. Using both <code>tree.sha</code> and <code>content</code> will return an error.</p>"
+                "description": "<p>The SHA1 checksum ID of the object in the tree. Also called <code>tree.sha</code>. If the value is <code>null</code> then the file will be deleted.</p>\n<p><strong>Note:</strong> Use either <code>tree.sha</code> or <code>content</code> to specify the contents of the entry. Using both <code>tree.sha</code> and <code>content</code> will return an error.</p>"
               },
               {
                 "type": "string",
                 "name": "content",
-                "description": "<p>The content you want this file to have. GitHub will write this blob out and use that SHA for this entry. Use either this, or <code>tree.sha</code>.  </p>\n<p><strong>Note:</strong> Use either <code>tree.sha</code> or <code>content</code> to specify the contents of the entry. Using both <code>tree.sha</code> and <code>content</code> will return an error.</p>"
+                "description": "<p>The content you want this file to have. GitHub will write this blob out and use that SHA for this entry. Use either this, or <code>tree.sha</code>.</p>\n<p><strong>Note:</strong> Use either <code>tree.sha</code> or <code>content</code> to specify the contents of the entry. Using both <code>tree.sha</code> and <code>content</code> will return an error.</p>"
               }
             ]
           },
@@ -189498,7 +189600,7 @@
             "type": "string",
             "name": "lock_reason",
             "in": "body",
-            "description": "<p>The reason for locking the issue or pull request conversation. Lock will fail if you don't use one of these reasons:  </p>\n<ul>\n<li><code>off-topic</code>  </li>\n<li><code>too heated</code>  </li>\n<li><code>resolved</code>  </li>\n<li><code>spam</code></li>\n</ul>",
+            "description": "<p>The reason for locking the issue or pull request conversation. Lock will fail if you don't use one of these reasons:</p>\n<ul>\n<li><code>off-topic</code></li>\n<li><code>too heated</code></li>\n<li><code>resolved</code></li>\n<li><code>spam</code></li>\n</ul>",
             "enum": [
               "off-topic",
               "too heated",
@@ -224111,7 +224213,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Adds labels to an issue. If you provide an empty array of labels, all labels are removed from the issue. </p>",
+        "descriptionHTML": "<p>Adds labels to an issue. If you provide an empty array of labels, all labels are removed from the issue.</p>",
         "statusCodes": [
           {
             "httpStatusCode": "200",
@@ -261152,7 +261254,7 @@
             "type": "string",
             "name": "role",
             "in": "body",
-            "description": "<p>The role to give the user in the organization. Can be one of:  </p>\n<ul>\n<li><code>admin</code> - The user will become an owner of the organization.  </li>\n<li><code>member</code> - The user will become a non-owner member of the organization.</li>\n</ul>",
+            "description": "<p>The role to give the user in the organization. Can be one of:</p>\n<ul>\n<li><code>admin</code> - The user will become an owner of the organization.</li>\n<li><code>member</code> - The user will become a non-owner member of the organization.</li>\n</ul>",
             "enum": [
               "admin",
               "member"
@@ -261554,7 +261656,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Only authenticated organization owners can add a member to the organization or update the member's role.</p>\n<ul>\n<li>If the authenticated user is <em>adding</em> a member to the organization, the invited user will receive an email inviting them to the organization. The user's <a href=\"https://docs.github.com/github-ae@latest/rest/orgs/members#get-organization-membership-for-a-user\">membership status</a> will be <code>pending</code> until they accept the invitation.</li>\n<li>Authenticated users can <em>update</em> a user's membership by passing the <code>role</code> parameter. If the authenticated user changes a member's role to <code>admin</code>, the affected user will receive an email notifying them that they've been made an organization owner. If the authenticated user changes an owner's role to <code>member</code>, no email will be sent.</li>\n</ul>\n<p><strong>Rate limits</strong></p>\n<p>To prevent abuse, the authenticated user is limited to 50 organization invitations per 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.</p>",
+        "descriptionHTML": "<p>Only authenticated organization owners can add a member to the organization or update the member's role.</p>\n<ul>\n<li>\n<p>If the authenticated user is <em>adding</em> a member to the organization, the invited user will receive an email inviting them to the organization. The user's <a href=\"https://docs.github.com/github-ae@latest/rest/orgs/members#get-organization-membership-for-a-user\">membership status</a> will be <code>pending</code> until they accept the invitation.</p>\n</li>\n<li>\n<p>Authenticated users can <em>update</em> a user's membership by passing the <code>role</code> parameter. If the authenticated user changes a member's role to <code>admin</code>, the affected user will receive an email notifying them that they've been made an organization owner. If the authenticated user changes an owner's role to <code>member</code>, no email will be sent.</p>\n</li>\n</ul>\n<p><strong>Rate limits</strong></p>\n<p>To prevent abuse, the authenticated user is limited to 50 organization invitations per 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.</p>",
         "statusCodes": [
           {
             "httpStatusCode": "200",
@@ -263915,7 +264017,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -264108,7 +264210,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -264363,7 +264465,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -264422,7 +264524,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -264527,7 +264629,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -264664,7 +264766,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -264893,7 +264995,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -265175,7 +265277,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -265253,7 +265355,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -325242,7 +325344,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>This endpoint makes use of <a href=\"https://docs.github.com/github-ae@latest/rest/overview/resources-in-the-rest-api#hypermedia\">a Hypermedia relation</a> to determine which URL to access. The endpoint you call to upload release assets is specific to your release. Use the <code>upload_url</code> returned in\nthe response of the <a href=\"https://docs.github.com/github-ae@latest/rest/releases/releases#create-a-release\">Create a release endpoint</a> to upload a release asset.</p>\n<p>You need to use an HTTP client which supports <a href=\"http://en.wikipedia.org/wiki/Server_Name_Indication\">SNI</a> to make calls to this endpoint.</p>\n<p>Most libraries will set the required <code>Content-Length</code> header automatically. Use the required <code>Content-Type</code> header to provide the media type of the asset. For a list of media types, see <a href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\">Media Types</a>. For example: </p>\n<p><code>application/zip</code></p>\n<p>GitHub AE expects the asset data in its raw binary form, rather than JSON. You will send the raw binary content of the asset as the request body. Everything else about the endpoint is the same as the rest of the API. For example,\nyou'll still need to pass your authentication to be able to upload an asset.</p>\n<p>When an upstream failure occurs, you will receive a <code>502 Bad Gateway</code> status. This may leave an empty asset with a state of <code>starter</code>. It can be safely deleted.</p>\n<p><strong>Notes:</strong></p>\n<ul>\n<li>GitHub AE renames asset filenames that have special characters, non-alphanumeric characters, and leading or trailing periods. The \"<a href=\"https://docs.github.com/github-ae@latest/rest/releases/assets#list-release-assets\">List release assets</a>\"\nendpoint lists the renamed filenames. For more information and help, contact <a href=\"https://support.github.com/contact?tags=dotcom-rest-api\">GitHub AE Support</a>.</li>\n<li>To find the <code>release_id</code> query the <a href=\"https://docs.github.com/github-ae@latest/rest/releases/releases#get-the-latest-release\"><code>GET /repos/{owner}/{repo}/releases/latest</code> endpoint</a>. </li>\n<li>If you upload an asset with the same filename as another uploaded asset, you'll receive an error and must delete the old file before you can re-upload the new asset.</li>\n</ul>",
+        "descriptionHTML": "<p>This endpoint makes use of <a href=\"https://docs.github.com/github-ae@latest/rest/overview/resources-in-the-rest-api#hypermedia\">a Hypermedia relation</a> to determine which URL to access. The endpoint you call to upload release assets is specific to your release. Use the <code>upload_url</code> returned in\nthe response of the <a href=\"https://docs.github.com/github-ae@latest/rest/releases/releases#create-a-release\">Create a release endpoint</a> to upload a release asset.</p>\n<p>You need to use an HTTP client which supports <a href=\"http://en.wikipedia.org/wiki/Server_Name_Indication\">SNI</a> to make calls to this endpoint.</p>\n<p>Most libraries will set the required <code>Content-Length</code> header automatically. Use the required <code>Content-Type</code> header to provide the media type of the asset. For a list of media types, see <a href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\">Media Types</a>. For example:</p>\n<p><code>application/zip</code></p>\n<p>GitHub AE expects the asset data in its raw binary form, rather than JSON. You will send the raw binary content of the asset as the request body. Everything else about the endpoint is the same as the rest of the API. For example,\nyou'll still need to pass your authentication to be able to upload an asset.</p>\n<p>When an upstream failure occurs, you will receive a <code>502 Bad Gateway</code> status. This may leave an empty asset with a state of <code>starter</code>. It can be safely deleted.</p>\n<p><strong>Notes:</strong></p>\n<ul>\n<li>GitHub AE renames asset filenames that have special characters, non-alphanumeric characters, and leading or trailing periods. The \"<a href=\"https://docs.github.com/github-ae@latest/rest/releases/assets#list-release-assets\">List release assets</a>\"\nendpoint lists the renamed filenames. For more information and help, contact <a href=\"https://support.github.com/contact?tags=dotcom-rest-api\">GitHub AE Support</a>.</li>\n<li>To find the <code>release_id</code> query the <a href=\"https://docs.github.com/github-ae@latest/rest/releases/releases#get-the-latest-release\"><code>GET /repos/{owner}/{repo}/releases/latest</code> endpoint</a>.</li>\n<li>If you upload an asset with the same filename as another uploaded asset, you'll receive an error and must delete the old file before you can re-upload the new asset.</li>\n</ul>",
         "statusCodes": [
           {
             "httpStatusCode": "201",
@@ -344014,7 +344116,7 @@
           },
           {
             "name": "affiliation",
-            "description": "<p>Comma-separated list of values. Can include:  </p>\n<ul>\n<li><code>owner</code>: Repositories that are owned by the authenticated user.  </li>\n<li><code>collaborator</code>: Repositories that the user has been added to as a collaborator.  </li>\n<li><code>organization_member</code>: Repositories that the user has access to through being a member of an organization. This includes every repository on every team that the user is on.</li>\n</ul>",
+            "description": "<p>Comma-separated list of values. Can include:</p>\n<ul>\n<li><code>owner</code>: Repositories that are owned by the authenticated user.</li>\n<li><code>collaborator</code>: Repositories that the user has been added to as a collaborator.</li>\n<li><code>organization_member</code>: Repositories that the user has access to through being a member of an organization. This includes every repository on every team that the user is on.</li>\n</ul>",
             "in": "query",
             "required": false,
             "schema": {
@@ -351125,7 +351227,7 @@
           }
         ],
         "previews": [],
-        "descriptionHTML": "<p>Gets the contents of a file or directory in a repository. Specify the file path or directory in <code>:path</code>. If you omit\n<code>:path</code>, you will receive the contents of the repository's root directory. See the description below regarding what the API response includes for directories. </p>\n<p>Files and symlinks support <a href=\"https://docs.github.com/github-ae@latest/rest/overview/media-types\">a custom media type</a> for\nretrieving the raw content or rendered HTML (when supported). All content types support <a href=\"https://docs.github.com/github-ae@latest/rest/overview/media-types\">a custom media\ntype</a> to ensure the content is returned in a consistent\nobject format.</p>\n<p><strong>Notes</strong>:</p>\n<ul>\n<li>\n<p>To get a repository's contents recursively, you can <a href=\"https://docs.github.com/github-ae@latest/rest/git/trees#get-a-tree\">recursively get the tree</a>.</p>\n</li>\n<li>\n<p>This API has an upper limit of 1,000 files for a directory. If you need to retrieve more files, use the <a href=\"https://docs.github.com/github-ae@latest/rest/git/trees#get-a-tree\">Git Trees\nAPI</a>.</p>\n</li>\n<li>\n<p>Download URLs expire and are meant to be used just once. To ensure the download URL does not expire, please use the contents API to obtain a fresh download URL for each download. </p>\n</li>\n<li>\n<p>This API supports files up to 1 megabyte in size.</p>\n<p> If the content is a directory:\nThe response will be an array of objects, one object for each item in the directory.\nWhen listing the contents of a directory, submodules have their \"type\" specified as \"file\". Logically, the value\n<em>should</em> be \"submodule\". This behavior exists in API v3 <a href=\"https://git.io/v1YCW\">for backwards compatibility purposes</a>.\nIn the next major version of the API, the type will be returned as \"submodule\".</p>\n<p> If the content is a symlink:\nIf the requested <code>:path</code> points to a symlink, and the symlink's target is a normal file in the repository, then the\nAPI responds with the content of the file (in the format shown in the example. Otherwise, the API responds with an object\ndescribing the symlink itself.</p>\n<p> If the content is a submodule:\nThe <code>submodule_git_url</code> identifies the location of the submodule repository, and the <code>sha</code> identifies a specific\ncommit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out\nthe submodule at that specific commit.</p>\n</li>\n</ul>\n<p>If the submodule repository is not hosted on github.com, the Git URLs (<code>git_url</code> and <code>_links[\"git\"]</code>) and the\ngithub.com URLs (<code>html_url</code> and <code>_links[\"html\"]</code>) will have null values.</p>",
+        "descriptionHTML": "<p>Gets the contents of a file or directory in a repository. Specify the file path or directory in <code>:path</code>. If you omit\n<code>:path</code>, you will receive the contents of the repository's root directory. See the description below regarding what the API response includes for directories.</p>\n<p>Files and symlinks support <a href=\"https://docs.github.com/github-ae@latest/rest/overview/media-types\">a custom media type</a> for\nretrieving the raw content or rendered HTML (when supported). All content types support <a href=\"https://docs.github.com/github-ae@latest/rest/overview/media-types\">a custom media\ntype</a> to ensure the content is returned in a consistent\nobject format.</p>\n<p><strong>Notes</strong>:</p>\n<ul>\n<li>To get a repository's contents recursively, you can <a href=\"https://docs.github.com/github-ae@latest/rest/git/trees#get-a-tree\">recursively get the tree</a>.</li>\n<li>This API has an upper limit of 1,000 files for a directory. If you need to retrieve more files, use the <a href=\"https://docs.github.com/github-ae@latest/rest/git/trees#get-a-tree\">Git Trees\nAPI</a>.</li>\n<li>Download URLs expire and are meant to be used just once. To ensure the download URL does not expire, please use the contents API to obtain a fresh download URL for each download.</li>\n<li>This API supports files up to 1 megabyte in size.</li>\n</ul>\n<p>If the content is a directory:\nThe response will be an array of objects, one object for each item in the directory.\nWhen listing the contents of a directory, submodules have their \"type\" specified as \"file\". Logically, the value\n<em>should</em> be \"submodule\". This behavior exists in API v3 <a href=\"https://git.io/v1YCW\">for backwards compatibility purposes</a>.\nIn the next major version of the API, the type will be returned as \"submodule\".</p>\n<p>If the content is a symlink:\nIf the requested <code>:path</code> points to a symlink, and the symlink's target is a normal file in the repository, then the\nAPI responds with the content of the file (in the format shown in the example. Otherwise, the API responds with an object\ndescribing the symlink itself.</p>\n<p>If the content is a submodule:\nThe <code>submodule_git_url</code> identifies the location of the submodule repository, and the <code>sha</code> identifies a specific\ncommit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out\nthe submodule at that specific commit.</p>\n<p>If the submodule repository is not hosted on github.com, the Git URLs (<code>git_url</code> and <code>_links[\"git\"]</code>) and the\ngithub.com URLs (<code>html_url</code> and <code>_links[\"html\"]</code>) will have null values.</p>",
         "statusCodes": [
           {
             "httpStatusCode": "200",
@@ -359732,7 +359834,7 @@
           },
           {
             "name": "order",
-            "description": "<p><strong>This field is deprecated.</strong> Determines whether the first search result returned is the highest number of matches (<code>desc</code>) or lowest number of matches (<code>asc</code>). This parameter is ignored unless you provide <code>sort</code>. </p>",
+            "description": "<p><strong>This field is deprecated.</strong> Determines whether the first search result returned is the highest number of matches (<code>desc</code>) or lowest number of matches (<code>asc</code>). This parameter is ignored unless you provide <code>sort</code>.</p>",
             "in": "query",
             "deprecated": true,
             "required": false,
@@ -370323,7 +370425,7 @@
             "type": "string",
             "name": "privacy",
             "in": "body",
-            "description": "<p>The level of privacy this team should have. The options are:<br>\n<strong>For a non-nested team:</strong>  </p>\n<ul>\n<li><code>secret</code> - only visible to organization owners and members of this team.  </li>\n<li><code>closed</code> - visible to all members of this organization.<br>\nDefault: <code>secret</code><br>\n<strong>For a parent or child team:</strong>  </li>\n<li><code>closed</code> - visible to all members of this organization.<br>\nDefault for child team: <code>closed</code></li>\n</ul>",
+            "description": "<p>The level of privacy this team should have. The options are:<br>\n<strong>For a non-nested team:</strong></p>\n<ul>\n<li><code>secret</code> - only visible to organization owners and members of this team.</li>\n<li><code>closed</code> - visible to all members of this organization.<br>\nDefault: <code>secret</code><br>\n<strong>For a parent or child team:</strong></li>\n<li><code>closed</code> - visible to all members of this organization.<br>\nDefault for child team: <code>closed</code></li>\n</ul>",
             "enum": [
               "secret",
               "closed"
@@ -370333,7 +370435,7 @@
             "type": "string",
             "name": "notification_setting",
             "in": "body",
-            "description": "<p>The notification setting the team has chosen. The options are:  </p>\n<ul>\n<li><code>notifications_enabled</code> - team members receive notifications when the team is @mentioned.  </li>\n<li><code>notifications_disabled</code> - no one receives notifications.<br>\nDefault: <code>notifications_enabled</code></li>\n</ul>",
+            "description": "<p>The notification setting the team has chosen. The options are:</p>\n<ul>\n<li><code>notifications_enabled</code> - team members receive notifications when the team is @mentioned.</li>\n<li><code>notifications_disabled</code> - no one receives notifications.<br>\nDefault: <code>notifications_enabled</code></li>\n</ul>",
             "enum": [
               "notifications_enabled",
               "notifications_disabled"
@@ -371894,7 +371996,7 @@
             "type": "string",
             "name": "privacy",
             "in": "body",
-            "description": "<p>The level of privacy this team should have. Editing teams without specifying this parameter leaves <code>privacy</code> intact. When a team is nested, the <code>privacy</code> for parent teams cannot be <code>secret</code>. The options are:<br>\n<strong>For a non-nested team:</strong>  </p>\n<ul>\n<li><code>secret</code> - only visible to organization owners and members of this team.  </li>\n<li><code>closed</code> - visible to all members of this organization.<br>\n<strong>For a parent or child team:</strong>  </li>\n<li><code>closed</code> - visible to all members of this organization.</li>\n</ul>",
+            "description": "<p>The level of privacy this team should have. Editing teams without specifying this parameter leaves <code>privacy</code> intact. When a team is nested, the <code>privacy</code> for parent teams cannot be <code>secret</code>. The options are:<br>\n<strong>For a non-nested team:</strong></p>\n<ul>\n<li><code>secret</code> - only visible to organization owners and members of this team.</li>\n<li><code>closed</code> - visible to all members of this organization.<br>\n<strong>For a parent or child team:</strong></li>\n<li><code>closed</code> - visible to all members of this organization.</li>\n</ul>",
             "enum": [
               "secret",
               "closed"
@@ -371904,7 +372006,7 @@
             "type": "string",
             "name": "notification_setting",
             "in": "body",
-            "description": "<p>The notification setting the team has chosen. Editing teams without specifying this parameter leaves <code>notification_setting</code> intact. The options are: </p>\n<ul>\n<li><code>notifications_enabled</code> - team members receive notifications when the team is @mentioned.  </li>\n<li><code>notifications_disabled</code> - no one receives notifications.</li>\n</ul>",
+            "description": "<p>The notification setting the team has chosen. Editing teams without specifying this parameter leaves <code>notification_setting</code> intact. The options are:</p>\n<ul>\n<li><code>notifications_enabled</code> - team members receive notifications when the team is @mentioned.</li>\n<li><code>notifications_disabled</code> - no one receives notifications.</li>\n</ul>",
             "enum": [
               "notifications_enabled",
               "notifications_disabled"
@@ -379199,7 +379301,7 @@
             "type": "string",
             "name": "privacy",
             "in": "body",
-            "description": "<p>The level of privacy this team should have. Editing teams without specifying this parameter leaves <code>privacy</code> intact. The options are:<br>\n<strong>For a non-nested team:</strong>  </p>\n<ul>\n<li><code>secret</code> - only visible to organization owners and members of this team.  </li>\n<li><code>closed</code> - visible to all members of this organization.<br>\n<strong>For a parent or child team:</strong>  </li>\n<li><code>closed</code> - visible to all members of this organization.</li>\n</ul>",
+            "description": "<p>The level of privacy this team should have. Editing teams without specifying this parameter leaves <code>privacy</code> intact. The options are:<br>\n<strong>For a non-nested team:</strong></p>\n<ul>\n<li><code>secret</code> - only visible to organization owners and members of this team.</li>\n<li><code>closed</code> - visible to all members of this organization.<br>\n<strong>For a parent or child team:</strong></li>\n<li><code>closed</code> - visible to all members of this organization.</li>\n</ul>",
             "enum": [
               "secret",
               "closed"
@@ -379209,7 +379311,7 @@
             "type": "string",
             "name": "notification_setting",
             "in": "body",
-            "description": "<p>The notification setting the team has chosen. Editing teams without specifying this parameter leaves <code>notification_setting</code> intact. The options are: </p>\n<ul>\n<li><code>notifications_enabled</code> - team members receive notifications when the team is @mentioned.  </li>\n<li><code>notifications_disabled</code> - no one receives notifications.</li>\n</ul>",
+            "description": "<p>The notification setting the team has chosen. Editing teams without specifying this parameter leaves <code>notification_setting</code> intact. The options are:</p>\n<ul>\n<li><code>notifications_enabled</code> - team members receive notifications when the team is @mentioned.</li>\n<li><code>notifications_disabled</code> - no one receives notifications.</li>\n</ul>",
             "enum": [
               "notifications_enabled",
               "notifications_disabled"
@@ -402563,7 +402665,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -402678,7 +402780,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -402825,7 +402927,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -403064,7 +403166,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -403356,7 +403458,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -404132,7 +404234,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -404432,7 +404534,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -404811,7 +404913,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -404880,7 +404982,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {
@@ -404949,7 +405051,7 @@
           },
           {
             "name": "hook_id",
-            "description": "<p>The unique identifier of the hook.</p>",
+            "description": "<p>The unique identifier of the hook. You can find this value in the <code>X-GitHub-Hook-ID</code> header of a webhook delivery.</p>",
             "in": "path",
             "required": true,
             "schema": {

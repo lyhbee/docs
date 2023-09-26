@@ -201101,7 +201101,7 @@
                 {
                   "type": "object",
                   "name": "required_linear_history",
-                  "description": "<p>Prevent merge commits from being pushed to matching branches.</p>",
+                  "description": "<p>Prevent merge commits from being pushed to matching refs.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201120,7 +201120,7 @@
                 {
                   "type": "object",
                   "name": "required_deployments",
-                  "description": "<p>Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule.</p>",
+                  "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201152,7 +201152,7 @@
                 {
                   "type": "object",
                   "name": "required_signatures",
-                  "description": "<p>Commits pushed to matching branches must have verified signatures.</p>",
+                  "description": "<p>Commits pushed to matching refs must have verified signatures.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201227,7 +201227,7 @@
                 {
                   "type": "object",
                   "name": "required_status_checks",
-                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed.</p>",
+                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201278,7 +201278,7 @@
                 {
                   "type": "object",
                   "name": "non_fast_forward",
-                  "description": "<p>Prevent users with push access from force pushing to branches.</p>",
+                  "description": "<p>Prevent users with push access from force pushing to refs.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201876,7 +201876,7 @@
                 {
                   "type": "object",
                   "name": "required_linear_history",
-                  "description": "<p>Prevent merge commits from being pushed to matching branches.</p>",
+                  "description": "<p>Prevent merge commits from being pushed to matching refs.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201895,7 +201895,7 @@
                 {
                   "type": "object",
                   "name": "required_deployments",
-                  "description": "<p>Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule.</p>",
+                  "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201927,7 +201927,7 @@
                 {
                   "type": "object",
                   "name": "required_signatures",
-                  "description": "<p>Commits pushed to matching branches must have verified signatures.</p>",
+                  "description": "<p>Commits pushed to matching refs must have verified signatures.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202002,7 +202002,7 @@
                 {
                   "type": "object",
                   "name": "required_status_checks",
-                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed.</p>",
+                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202053,7 +202053,7 @@
                 {
                   "type": "object",
                   "name": "non_fast_forward",
-                  "description": "<p>Prevent users with push access from force pushing to branches.</p>",
+                  "description": "<p>Prevent users with push access from force pushing to refs.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202651,7 +202651,7 @@
                 {
                   "type": "object",
                   "name": "required_linear_history",
-                  "description": "<p>Prevent merge commits from being pushed to matching branches.</p>",
+                  "description": "<p>Prevent merge commits from being pushed to matching refs.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202670,7 +202670,7 @@
                 {
                   "type": "object",
                   "name": "required_deployments",
-                  "description": "<p>Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule.</p>",
+                  "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202702,7 +202702,7 @@
                 {
                   "type": "object",
                   "name": "required_signatures",
-                  "description": "<p>Commits pushed to matching branches must have verified signatures.</p>",
+                  "description": "<p>Commits pushed to matching refs must have verified signatures.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202777,7 +202777,7 @@
                 {
                   "type": "object",
                   "name": "required_status_checks",
-                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed.</p>",
+                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202828,7 +202828,7 @@
                 {
                   "type": "object",
                   "name": "non_fast_forward",
-                  "description": "<p>Prevent users with push access from force pushing to branches.</p>",
+                  "description": "<p>Prevent users with push access from force pushing to refs.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -203383,7 +203383,7 @@
                     {
                       "type": "object",
                       "name": "required_linear_history",
-                      "description": "<p>Prevent merge commits from being pushed to matching branches.</p>",
+                      "description": "<p>Prevent merge commits from being pushed to matching refs.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203402,7 +203402,7 @@
                     {
                       "type": "object",
                       "name": "required_deployments",
-                      "description": "<p>Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule.</p>",
+                      "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203434,7 +203434,7 @@
                     {
                       "type": "object",
                       "name": "required_signatures",
-                      "description": "<p>Commits pushed to matching branches must have verified signatures.</p>",
+                      "description": "<p>Commits pushed to matching refs must have verified signatures.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203509,7 +203509,7 @@
                     {
                       "type": "object",
                       "name": "required_status_checks",
-                      "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed.</p>",
+                      "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203560,7 +203560,7 @@
                     {
                       "type": "object",
                       "name": "non_fast_forward",
-                      "description": "<p>Prevent users with push access from force pushing to branches.</p>",
+                      "description": "<p>Prevent users with push access from force pushing to refs.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203927,7 +203927,7 @@
                     {
                       "type": "object",
                       "name": "required_linear_history",
-                      "description": "<p>Prevent merge commits from being pushed to matching branches.</p>",
+                      "description": "<p>Prevent merge commits from being pushed to matching refs.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203946,7 +203946,7 @@
                     {
                       "type": "object",
                       "name": "required_deployments",
-                      "description": "<p>Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule.</p>",
+                      "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203978,7 +203978,7 @@
                     {
                       "type": "object",
                       "name": "required_signatures",
-                      "description": "<p>Commits pushed to matching branches must have verified signatures.</p>",
+                      "description": "<p>Commits pushed to matching refs must have verified signatures.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -204053,7 +204053,7 @@
                     {
                       "type": "object",
                       "name": "required_status_checks",
-                      "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed.</p>",
+                      "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -204104,7 +204104,7 @@
                     {
                       "type": "object",
                       "name": "non_fast_forward",
-                      "description": "<p>Prevent users with push access from force pushing to branches.</p>",
+                      "description": "<p>Prevent users with push access from force pushing to refs.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -204476,7 +204476,7 @@
                         {
                           "type": "object",
                           "name": "required_linear_history",
-                          "description": "<p>Prevent merge commits from being pushed to matching branches.</p>",
+                          "description": "<p>Prevent merge commits from being pushed to matching refs.</p>",
                           "isRequired": [
                             "type"
                           ],
@@ -204495,7 +204495,7 @@
                         {
                           "type": "object",
                           "name": "required_deployments",
-                          "description": "<p>Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule.</p>",
+                          "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
                           "isRequired": [
                             "type"
                           ],
@@ -204527,7 +204527,7 @@
                         {
                           "type": "object",
                           "name": "required_signatures",
-                          "description": "<p>Commits pushed to matching branches must have verified signatures.</p>",
+                          "description": "<p>Commits pushed to matching refs must have verified signatures.</p>",
                           "isRequired": [
                             "type"
                           ],
@@ -204602,7 +204602,7 @@
                         {
                           "type": "object",
                           "name": "required_status_checks",
-                          "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed.</p>",
+                          "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
                           "isRequired": [
                             "type"
                           ],
@@ -204653,7 +204653,7 @@
                         {
                           "type": "object",
                           "name": "non_fast_forward",
-                          "description": "<p>Prevent users with push access from force pushing to branches.</p>",
+                          "description": "<p>Prevent users with push access from force pushing to refs.</p>",
                           "isRequired": [
                             "type"
                           ],
