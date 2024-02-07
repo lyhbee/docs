@@ -1,8 +1,7 @@
 ---
 title: query format
-versions:
+versions: # DO NOT MANUALLY EDIT. CHANGES WILL BE OVERWRITTEN BY A 🤖
   fpt: '*'
-  ghae: '*'
   ghec: '*'
   ghes: '*'
 topics:
@@ -32,9 +31,11 @@ codeql query format [--output=<file>] [--in-place] [--backup=<ext>] <options>...
 
 Autoformat QL source code.
 
-## Primary options
+## Options
 
-#### `<file>...` <!-- markdownlint-disable-line heading-increment -->
+### Primary Options
+
+#### `<file>...`
 
 One or more `.ql` or `.qll` source files to autoformat. A dash can be
 specified to read from standard input.
@@ -100,3 +101,13 @@ the running subcommand.
 
 (To write a log file with a name you have full control over, instead
 give `--log-to-stderr` and redirect stderr as desired.)
+
+#### `--common-caches=<dir>`
+
+\[Advanced] Controls the location of cached data on disk that will
+persist between several runs of the CLI, such as downloaded QL packs and
+compiled query plans. If not set explicitly, this defaults to a
+directory named `.codeql` in the user's home directory; it will be
+created if it doesn't already exist.
+
+Available since `v2.15.2`.

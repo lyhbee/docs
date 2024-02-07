@@ -2,8 +2,9 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { NavList } from '@primer/react'
 
-import { ProductTreeNode, useMainContext } from 'components/context/MainContext'
+import { ProductTreeNode, useMainContext } from 'src/frame/components/context/MainContext'
 import { useAutomatedPageContext } from 'src/automated-pipelines/components/AutomatedPageContext'
+import { nonAutomatedRestPaths } from '../../rest/lib/config.js'
 
 export const SidebarProduct = () => {
   const router = useRouter()
@@ -41,36 +42,28 @@ export const SidebarProduct = () => {
   )
 
   const restSection = () => {
-    const conceptualPages = sidebarTree.childPages.filter(
-      (page) =>
-        page.href.includes('guides') ||
-        page.href.includes('overview') ||
-        page.href.includes('quickstart'),
+    const conceptualPages = sidebarTree.childPages.filter((page) =>
+      nonAutomatedRestPaths.some((item: string) => page.href.includes(item)),
     )
-    const restPages = sidebarTree.childPages.filter(
-      (page) =>
-        !page.href.includes('guides') &&
-        !page.href.includes('overview') &&
-        !page.href.includes('quickstart'),
+    const restPages = sidebarTree.childPages.filter((page) =>
+      nonAutomatedRestPaths.every((item: string) => !page.href.includes(item)),
     )
     return (
-      <>
-        <div className="ml-3">
-          <NavList aria-label="REST sidebar overview articles">
-            {conceptualPages.map((childPage) => (
-              <NavListItem key={childPage.href} childPage={childPage} />
-            ))}
-          </NavList>
+      <div className="ml-3">
+        <NavList aria-label="REST sidebar overview articles">
+          {conceptualPages.map((childPage) => (
+            <NavListItem key={childPage.href} childPage={childPage} />
+          ))}
+        </NavList>
 
-          <hr data-testid="rest-sidebar-reference" className="m-2" />
+        <hr data-testid="rest-sidebar-reference" className="m-2" />
 
-          <NavList aria-label="REST sidebar reference pages">
-            {restPages.map((category) => (
-              <RestNavListItem key={category.href} category={category} />
-            ))}
-          </NavList>
-        </div>
-      </>
+        <NavList aria-label="REST sidebar reference pages">
+          {restPages.map((category) => (
+            <RestNavListItem key={category.href} category={category} />
+          ))}
+        </NavList>
+      </div>
     )
   }
 
@@ -116,18 +109,12 @@ function RestNavListItem({ category }: { category: ProductTreeNode }) {
   const miniTocItems =
     query.productId === 'rest' ||
     // These pages need the Article Page mini tocs instead of the Rest Pages
-    asPath.includes('/rest/guides') ||
-    asPath.includes('/rest/overview') ||
-    asPath.includes('/rest/quickstart')
+    nonAutomatedRestPaths.some((item: string) => asPath.includes(item))
       ? []
       : useAutomatedPageContext().miniTocItems
 
   useEffect(() => {
-    if (
-      !asPath.includes('guides') &&
-      !asPath.includes('overview') &&
-      !asPath.includes('quickstart')
-    ) {
+    if (nonAutomatedRestPaths.every((item: string) => !asPath.includes(item))) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {

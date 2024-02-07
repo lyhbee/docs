@@ -24,11 +24,21 @@ Runners are the machines that execute jobs in a {% data variables.product.prodna
 
 {% data variables.product.prodname_dotcom %} provides runners that you can use to run your jobs, or you can [host your own runners](/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners). Each {% data variables.product.prodname_dotcom %}-hosted runner is a new virtual machine (VM) hosted by {% data variables.product.prodname_dotcom %} with the runner application and other tools preinstalled, and is available with Ubuntu Linux, Windows, or macOS operating systems. When you use a {% data variables.product.prodname_dotcom %}-hosted runner, machine maintenance and upgrades are taken care of for you.
 
+{% ifversion github-hosted-runners-emus-entitlements %}
+
+{% note %}
+
+**Note:** {% data reusables.actions.entitlement-minutes-emus %} For more information, see "[AUTOTITLE](/admin/identity-and-access-management/using-enterprise-managed-users-for-iam/about-enterprise-managed-users)."
+
+{% endnote %}
+
+{% endif %}
+
 {% ifversion not ghes %}
 
 ## Using a {% data variables.product.prodname_dotcom %}-hosted runner
 
-To use a {% data variables.product.prodname_dotcom %}-hosted runner, create a job and use `runs-on` to specify the type of runner that will process the job, such as `ubuntu-latest`, `windows-latest`, or `macos-latest`. For the full list of runner types, see "[AUTOTITLE](/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources)."{% ifversion repository-actions-runners %} If you have `repo: write` access to a repository, you can view a list of the runners available to use in workflows in the repository. For more information, see "[Viewing available runners for a repository](#viewing-available-runners-for-a-repository)."{% endif %}
+To use a {% data variables.product.prodname_dotcom %}-hosted runner, create a job and use `runs-on` to specify the type of runner that will process the job, such as `ubuntu-latest`, `windows-latest`, or `macos-latest`. For the full list of runner types, see "[AUTOTITLE](/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources)."{% ifversion repository-actions-runners %} If you have `repo: write` access to a repository, you can view a list of the runners available to use in workflows in the repository. For more information, see "[Viewing available runners for a repository](#viewing-available-runners-for-a-repository)."{% endif %}
 
 When the job begins, {% data variables.product.prodname_dotcom %} automatically provisions a new VM for that job. All steps in the job execute on the VM, allowing the steps in that job to share information using the runner's filesystem. You can run workflows directly on the VM or in a Docker container. When the job has finished, the VM is automatically decommissioned.
 
@@ -86,12 +96,6 @@ While the job runs, the logs and output can be viewed in the {% data variables.p
 
 ## Viewing available runners for a repository
 
-{% note %}
-
-**Note:** This feature is currently in beta and subject to change.
-
-{% endnote %}
-
 {% data reusables.actions.about-viewing-runner-list %}
 
 {% data reusables.repositories.navigate-to-repo %}
@@ -108,33 +112,21 @@ While the job runs, the logs and output can be viewed in the {% data variables.p
 
 {% ifversion actions-hosted-runners %}
 
+{% data variables.product.prodname_dotcom %}-hosted runners are available for use in both public and private repositories.
+
 {% note %}
 
-**Note**: {% data variables.product.prodname_dotcom %} also offers {% data variables.actions.hosted_runner %}s, which are available in larger configurations, with autoscaling enabled by default and optional dedicated IP addresses. For more information, see "[AUTOTITLE](/actions/using-github-hosted-runners/using-larger-runners#machine-specs-for-larger-runners)."
+**Note:** The `-latest` runner images are the latest stable images that {% data variables.product.prodname_dotcom %} provides, and might not be the most recent version of the operating system available from the operating system vendor.
 
 {% endnote %}
+
+{% warning %}
+
+**Warning:** Beta and Deprecated Images are provided "as-is", "with all faults" and "as available" and are excluded from the service level agreement and warranty. Beta Images may not be covered by customer support.
+
+{% endwarning %}
+
 {% endif %}
-
-Hardware specification for Windows and Linux virtual machines:
-- 2-core CPU (x86_64)
-- 7 GB of RAM
-- 14 GB of SSD space
-
-Hardware specification for macOS virtual machines:
-- 3-core CPU (x86_64)
-- 14 GB of RAM
-- 14 GB of SSD space
-
-Hardware specification for macOS XL virtual machines:
-- 12-core CPU (x86_64)
-- 30 GB of RAM
-- 14 GB of SSD space
-
-{% note %}
-
-**Note:** macOS XL runners are considered {% data variables.actions.hosted_runner %}s and are billed in the same way. This means macOS XL runners are not eligible for the use of included minutes on private repositories. For both private and public repositories, when macOS XL runners are in use, they will always be billed at the per-minute rate. For more information, see "[AUTOTITLE](/actions/using-github-hosted-runners/about-larger-runners#understanding-billing)."
-
-{% endnote %}
 
 {% data reusables.actions.supported-github-runners %}
 
@@ -154,17 +146,7 @@ The software tools included in {% data variables.product.prodname_dotcom %}-host
 
 Workflow logs include a link to the preinstalled tools on the exact runner. To find this information in the workflow log, expand the `Set up job` section. Under that section, expand the `Runner Image` section. The link following `Included Software` will describe the preinstalled tools on the runner that ran the workflow.
 
-For more information, see "[AUTOTITLE](/actions/monitoring-and-troubleshooting-workflows/viewing-workflow-run-history)."
-
-For the overall list of included tools for each runner operating system, see the links below:
-
-- [Ubuntu 22.04 LTS](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2204-Readme.md)
-- [Ubuntu 20.04 LTS](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2004-Readme.md)
-- [Windows Server 2022](https://github.com/actions/runner-images/blob/main/images/win/Windows2022-Readme.md)
-- [Windows Server 2019](https://github.com/actions/runner-images/blob/main/images/win/Windows2019-Readme.md)
-- [macOS 13](https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md)
-- [macOS 12](https://github.com/actions/runner-images/blob/main/images/macos/macos-12-Readme.md)
-- [macOS 11](https://github.com/actions/runner-images/blob/main/images/macos/macos-11-Readme.md)
+For more information, see "[AUTOTITLE](/actions/monitoring-and-troubleshooting-workflows/viewing-workflow-run-history)." For the overall list of included tools for each runner operating system, see the [Available Images](https://github.com/actions/runner-images#available-images) documentation the runner images repository.
 
 {% data variables.product.prodname_dotcom %}-hosted runners include the operating system's default built-in tools, in addition to the packages listed in the above references. For example, Ubuntu and macOS runners include `grep`, `find`, and `which`, among other default tools.
 
@@ -177,7 +159,7 @@ You can also view a software bill of materials (SBOM) for each build of the Wind
 ### Using preinstalled software
 
 We recommend using actions to interact with the software installed on runners. This approach has several benefits:
-- Usually, actions provide more flexible functionality like versions selection, ability to pass arguments, and parameters
+- Usually, actions provide more flexible functionality like version selection, ability to pass arguments, and parameters
 - It ensures the tool versions used in your workflow will remain the same regardless of software updates
 
 If there is a tool that you'd like to request, please open an issue at [actions/runner-images](https://github.com/actions/runner-images). This repository also contains announcements about all major software updates on runners.
@@ -188,9 +170,11 @@ You can install additional software on {% data variables.product.prodname_dotcom
 
 ## Cloud hosts used by {% data variables.product.prodname_dotcom %}-hosted runners
 
-{% data variables.product.prodname_dotcom %} hosts Linux and Windows runners on `Standard_DS2_v2` virtual machines in Microsoft Azure with the {% data variables.product.prodname_actions %} runner application installed. The {% data variables.product.prodname_dotcom %}-hosted runner application is a fork of the Azure Pipelines Agent. Inbound ICMP packets are blocked for all Azure virtual machines, so ping or traceroute commands might not work. For more information about the `Standard_DS2_v2` resources, see "[Dv2 and DSv2-series](https://docs.microsoft.com/azure/virtual-machines/dv2-dsv2-series#dsv2-series)" in the Microsoft Azure documentation.
+{% data variables.product.prodname_dotcom %} hosts Linux and Windows runners on virtual machines in Microsoft Azure with the {% data variables.product.prodname_actions %} runner application installed. The {% data variables.product.prodname_dotcom %}-hosted runner application is a fork of the Azure Pipelines Agent. Inbound ICMP packets are blocked for all Azure virtual machines, so ping or traceroute commands might not work. {% data variables.product.prodname_dotcom %} hosts macOS runners in Azure data centers.
 
-{% data variables.product.prodname_dotcom %} hosts macOS runners in {% data variables.product.prodname_dotcom %}'s own macOS Cloud.
+{% data variables.product.prodname_dotcom %} provides different Linux and Windows runners for public and private repositories.
+- For Linux and Windows runners in **public** repositories, GitHub uses `Standard_D4ads_v5` virtual machines. For more information, see [Dasv5 and Dadsv5-series](https://learn.microsoft.com/en-us/azure/virtual-machines/dasv5-dadsv5-series#dadsv5-series) in the Microsoft Azure documentation.
+- For Linux and Windows runners in **private** repositories, GitHub uses `Standard_DS2_v2` virtual machines. For more information, see [Dv2 and DSv2-series](https://learn.microsoft.com/en-us/azure/virtual-machines/dv2-dsv2-series#dsv2-series) in the Microsoft Azure documentation.
 
 ## Workflow continuity
 

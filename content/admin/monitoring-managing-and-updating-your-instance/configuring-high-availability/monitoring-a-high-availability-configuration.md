@@ -31,6 +31,14 @@ You can also monitor replication status from the overview dashboard on your inst
 
 `http(s)://HOSTNAME/setup/replication`
 
+{% ifversion ghes-manage-api-cli-extension %}
+
+## Monitoring replication using the {% data variables.product.prodname_cli %}
+
+You can monitor replication status on your instance using the `gh es` extension for {% data variables.product.prodname_cli %}. For more information, see the [GH ES CLI usage documentation](https://github.com/github/gh-es/blob/main/USAGE.md#gh-es-replication-status)" and "[AUTOTITLE](/admin/administering-your-instance/administering-your-instance-from-the-command-line/administering-your-instance-using-the-github-cli)".
+  
+{% endif %}
+
 {% ifversion replication-management-api %}
 
 ## Monitoring replication using the REST API
@@ -114,7 +122,7 @@ ghe-storage info OID
 
 ### Getting support from {% data variables.product.company_short %}
 
-If you review the troubleshooting advice for replication and continue to experience issues on your instance, collect the following information, then contact {% data variables.contact.contact_ent_support %}.
+If you review the troubleshooting advice for replication and continue to experience issues on your instance, collect the following information, then contact us by visiting {% data variables.contact.contact_ent_support %}.
 
 - On each affected node, run `ghe-repl-status -vv`, then copy the output to your ticket. For more information, see "[AUTOTITLE](/admin/configuration/configuring-your-enterprise/command-line-utilities#ghe-repl-status)."
 - On each affected node, create a support bundle to attach to your ticket. For more information, see "[AUTOTITLE](/support/contacting-github-support/providing-data-to-github-support#creating-and-sharing-support-bundles)."

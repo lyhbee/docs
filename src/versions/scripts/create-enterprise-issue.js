@@ -9,7 +9,7 @@ const enterpriseDates = JSON.parse(
 )
 
 const acceptedMilestones = ['release', 'deprecation']
-const teamsToCC = '/cc @github/docs-content @github/docs-engineering'
+const teamsToCC = '/cc @github/docs-engineering'
 
 // Adjust these values as needed.
 const numberOfdaysBeforeReleaseToOpenIssue = 30
@@ -38,7 +38,7 @@ async function run() {
   const milestone = process.argv[2]
   if (!acceptedMilestones.includes(milestone)) {
     console.log("Please specify either 'release' or 'deprecation'\n")
-    console.log('Example: script/open-enterprise-issue.js release')
+    console.log('Example: src/versions/scripts/create-enterprise-issue.js release')
     process.exit(1)
   }
 
@@ -129,9 +129,6 @@ async function run() {
         column_id: 12198119,
         content_id: issue.data.id,
         content_type: 'Issue',
-        mediaType: {
-          previews: ['inertia'],
-        },
       })
 
       if (addCard.status === 201) {

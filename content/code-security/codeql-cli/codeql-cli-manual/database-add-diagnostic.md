@@ -1,9 +1,8 @@
 ---
 title: database add-diagnostic
 intro: '[Experimental] Add a piece of diagnostic information to a database.'
-versions:
+versions: # DO NOT MANUALLY EDIT. CHANGES WILL BE OVERWRITTEN BY A 🤖
   fpt: '*'
-  ghae: '*'
   ghec: '*'
   ghes: '*'
 topics:
@@ -34,9 +33,11 @@ codeql database add-diagnostic --source-id=<id> --source-name=<name> <options>..
 
 Available since `v2.12.6`.
 
-## Primary options
+## Options
 
-#### `<database>` <!-- markdownlint-disable-line heading-increment -->
+### Primary Options
+
+#### `<database>`
 
 \[Mandatory] Path to the CodeQL database to bundle.
 
@@ -150,3 +151,13 @@ the running subcommand.
 
 (To write a log file with a name you have full control over, instead
 give `--log-to-stderr` and redirect stderr as desired.)
+
+#### `--common-caches=<dir>`
+
+\[Advanced] Controls the location of cached data on disk that will
+persist between several runs of the CLI, such as downloaded QL packs and
+compiled query plans. If not set explicitly, this defaults to a
+directory named `.codeql` in the user's home directory; it will be
+created if it doesn't already exist.
+
+Available since `v2.15.2`.

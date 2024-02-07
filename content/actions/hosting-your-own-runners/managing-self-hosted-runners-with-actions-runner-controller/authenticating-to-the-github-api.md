@@ -28,7 +28,7 @@ You can authenticate {% data variables.product.prodname_actions_runner_controlle
 
 1. Create a {% data variables.product.prodname_github_app %} that is owned by an organization. For more information, see "[AUTOTITLE](/apps/creating-github-apps/creating-github-apps/creating-a-github-app)". Configure the {% data variables.product.prodname_github_app %} as follows.
 
-   1. For "Homepage URL," enter `http://github.com/actions/actions-runner-controller`.
+   1. For "Homepage URL," enter `https://github.com/actions/actions-runner-controller`.
 
    1. Under "Permissions," click **Repository permissions**. Then use the dropdown menus to select the following access permissions.
       - **Administration**: Read and write
@@ -67,9 +67,11 @@ ARC can use {% data variables.product.pat_v1_plural %} to register self-hosted r
     {% endif %}
 1. To create a Kubernetes secret with the value of your {% data variables.product.pat_v1 %}, use the following command.
 
+   {% data reusables.actions.arc-runners-namespace %}
+
    ```bash copy
    kubectl create secret generic pre-defined-secret \
-      --namespace=my_namespace \
+      --namespace=arc-runners \
       --from-literal=github_token='YOUR-PAT'
    ```
 

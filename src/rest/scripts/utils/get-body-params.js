@@ -101,7 +101,7 @@ export async function getBodyParams(schema, topLevel = false) {
       }
       keyParam.childParamsGroups.push(...(await getBodyParams(param.additionalProperties, false)))
       childParamsGroups.push(keyParam)
-    } else if (paramType && paramType.includes('array')) {
+    } else if (paramType && paramType.includes('array') && param.items) {
       if (param.items && param.items.oneOf) {
         if (param.items.oneOf.every((object) => object.type === 'object')) {
           paramType.splice(paramType.indexOf('array'), 1, `array of objects`)
@@ -115,6 +115,14 @@ export async function getBodyParams(schema, topLevel = false) {
         }
         if (arrayType === 'object') {
           childParamsGroups.push(...(await getBodyParams(param.items, false)))
+        }
+        // If the type is an enumerated list of strings
+        if (arrayType === 'string' && param.items.enum) {
+          param.description += `${
+            param.description ? '\n' : ''
+          }Supported values are: ${param.items.enum
+            .map((lang) => `<code>${lang}</code>`)
+            .join(', ')}`
         }
       }
     } else if (paramType && paramType.includes('object')) {
@@ -187,7 +195,6 @@ export async function getBodyParams(schema, topLevel = false) {
       childParamsGroups,
       topLevel,
     })
-
     bodyParametersParsed.push(paramDecorated)
   }
   return bodyParametersParsed

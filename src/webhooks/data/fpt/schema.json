@@ -2208,7 +2208,7 @@
                     {
                       "type": "integer",
                       "name": "size",
-                      "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
+                      "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
                     },
                     {
                       "type": "string",
@@ -4329,7 +4329,7 @@
                     {
                       "type": "integer",
                       "name": "size",
-                      "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
+                      "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
                     },
                     {
                       "type": "string",
@@ -6451,7 +6451,7 @@
                     {
                       "type": "integer",
                       "name": "size",
-                      "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
+                      "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
                     },
                     {
                       "type": "string",
@@ -8585,7 +8585,7 @@
                     {
                       "type": "integer",
                       "name": "size",
-                      "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
+                      "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
                     },
                     {
                       "type": "string",
@@ -9591,7 +9591,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>merge_group</code>, <code>pull_request_review_thread</code>, <code>workflow_job</code>, <code>merge_queue_entry</code>, <code>security_and_analysis</code>, <code>projects_v2_item</code>, <code>secret_scanning_alert_location</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -10095,7 +10095,7 @@
             {
               "type": "string or null",
               "name": "conclusion",
-              "description": "<p>The summary conclusion for all check runs that are part of the check suite. Can be one of <code>success</code>, <code>failure</code>, <code>neutral</code>, <code>cancelled</code>, <code>timed_out</code>, <code>action_required</code> or <code>stale</code>. This value will be <code>null</code> until the check run has <code>completed</code>.</p>",
+              "description": "<p>The summary conclusion for all check runs that are part of the check suite. This value will be <code>null</code> until the check run has <code>completed</code>.</p>",
               "isRequired": true,
               "enum": [
                 "success",
@@ -10489,7 +10489,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>pull_request_review_thread</code>, <code>workflow_job</code>, <code>merge_queue_entry</code>, <code>security_and_analysis</code>, <code>secret_scanning_alert_location</code>, <code>projects_v2_item</code>, <code>merge_group</code>, <code>repository_import</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -10993,7 +10993,7 @@
             {
               "type": "string or null",
               "name": "conclusion",
-              "description": "<p>The summary conclusion for all check runs that are part of the check suite. Can be one of <code>success</code>, <code>failure</code>,<code> neutral</code>, <code>cancelled</code>, <code>timed_out</code>, <code>action_required</code> or <code>stale</code>. This value will be <code>null</code> until the check run has completed.</p>",
+              "description": "<p>The summary conclusion for all check runs that are part of the check suite. This value will be <code>null</code> until the check run has completed.</p>",
               "isRequired": true,
               "enum": [
                 "success",
@@ -11385,7 +11385,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>pull_request_review_thread</code>, <code>merge_queue_entry</code>, <code>workflow_job</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -11889,7 +11889,7 @@
             {
               "type": "string or null",
               "name": "conclusion",
-              "description": "<p>The summary conclusion for all check runs that are part of the check suite. Can be one of <code>success</code>, <code>failure</code>,<code> neutral</code>, <code>cancelled</code>, <code>timed_out</code>, <code>action_required</code> or <code>stale</code>. This value will be <code>null</code> until the check run has completed.</p>",
+              "description": "<p>The summary conclusion for all check runs that are part of the check suite. This value will be <code>null</code> until the check run has completed.</p>",
               "isRequired": true,
               "enum": [
                 "success",
@@ -12390,7 +12390,7 @@
             {
               "type": "string or null",
               "name": "dismissed_reason",
-              "description": "<p>The reason for dismissing or closing the alert. Can be one of: <code>false positive</code>, <code>won't fix</code>, and <code>used in tests</code>.</p>",
+              "description": "<p>The reason for dismissing or closing the alert.</p>",
               "isRequired": true,
               "enum": [
                 "false positive",
@@ -12795,7 +12795,7 @@
             {
               "type": "string or null",
               "name": "dismissed_reason",
-              "description": "<p>The reason for dismissing or closing the alert. Can be one of: <code>false positive</code>, <code>won't fix</code>, and <code>used in tests</code>.</p>",
+              "description": "<p>The reason for dismissing or closing the alert.</p>",
               "isRequired": true,
               "enum": [
                 "false positive",
@@ -13563,7 +13563,7 @@
             {
               "type": "string or null",
               "name": "dismissed_reason",
-              "description": "<p>The reason for dismissing or closing the alert. Can be one of: <code>false positive</code>, <code>won't fix</code>, and <code>used in tests</code>.</p>",
+              "description": "<p>The reason for dismissing or closing the alert.</p>",
               "isRequired": true,
               "enum": [
                 "false positive",
@@ -14876,6 +14876,394 @@
       "category": "create"
     }
   },
+  "custom_property": {
+    "created": {
+      "descriptionHtml": "<p>A new custom property was created.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a custom property.</p>\n<p>For more information, see \"<a href=\"https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization\">Managing custom properties for repositories in your organization</a>\". For information about the APIs to manage custom properties, see \"<a href=\"https://docs.github.com/rest/orgs/custom-properties\">Custom properties</a>\" in the REST API documentation.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Custom properties\" organization permission.</p>",
+      "bodyParameters": [
+        {
+          "type": "string",
+          "name": "action",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "enum": [
+            "created"
+          ],
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "definition",
+          "in": "body",
+          "description": "<p>Custom property defined on an organization</p>",
+          "isRequired": true,
+          "childParamsGroups": [
+            {
+              "type": "string",
+              "name": "property_name",
+              "description": "<p>The name of the property</p>",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "value_type",
+              "description": "<p>The type of the value for the property</p>",
+              "isRequired": true,
+              "enum": [
+                "string",
+                "single_select"
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "required",
+              "description": "<p>Whether the property is required.</p>"
+            },
+            {
+              "type": "string or null",
+              "name": "default_value",
+              "description": "<p>Default value of the property</p>"
+            },
+            {
+              "type": "string or null",
+              "name": "description",
+              "description": "<p>Short description of the property</p>"
+            },
+            {
+              "type": "array of strings or null",
+              "name": "allowed_values",
+              "description": "<p>An ordered list of the allowed values of the property.\nThe property can have up to 200 allowed values.</p>"
+            },
+            {
+              "type": "string or null",
+              "name": "values_editable_by",
+              "description": "<p>Who can edit the values of the property</p>",
+              "enum": [
+                "org_actors",
+                "org_and_repo_actors",
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "installation",
+          "in": "body",
+          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "organization",
+          "in": "body",
+          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "sender",
+          "in": "body",
+          "description": "<p>The GitHub user that triggered the event. This property is included in every webhook payload.</p>",
+          "childParamsGroups": []
+        }
+      ],
+      "availability": [
+        "organization",
+        "app"
+      ],
+      "action": "created",
+      "category": "custom_property"
+    },
+    "deleted": {
+      "descriptionHtml": "<p>A custom property was deleted.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a custom property.</p>\n<p>For more information, see \"<a href=\"https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization\">Managing custom properties for repositories in your organization</a>\". For information about the APIs to manage custom properties, see \"<a href=\"https://docs.github.com/rest/orgs/custom-properties\">Custom properties</a>\" in the REST API documentation.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Custom properties\" organization permission.</p>",
+      "bodyParameters": [
+        {
+          "type": "string",
+          "name": "action",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "enum": [
+            "deleted"
+          ],
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "definition",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "childParamsGroups": [
+            {
+              "type": "string",
+              "name": "property_name",
+              "description": "<p>The name of the property that was deleted.</p>",
+              "isRequired": true
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "installation",
+          "in": "body",
+          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "organization",
+          "in": "body",
+          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "sender",
+          "in": "body",
+          "description": "<p>The GitHub user that triggered the event. This property is included in every webhook payload.</p>",
+          "childParamsGroups": []
+        }
+      ],
+      "availability": [
+        "organization",
+        "app"
+      ],
+      "action": "deleted",
+      "category": "custom_property"
+    },
+    "updated": {
+      "descriptionHtml": "<p>A custom property was updated.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a custom property.</p>\n<p>For more information, see \"<a href=\"https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization\">Managing custom properties for repositories in your organization</a>\". For information about the APIs to manage custom properties, see \"<a href=\"https://docs.github.com/rest/orgs/custom-properties\">Custom properties</a>\" in the REST API documentation.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Custom properties\" organization permission.</p>",
+      "bodyParameters": [
+        {
+          "type": "string",
+          "name": "action",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "enum": [
+            "updated"
+          ],
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "definition",
+          "in": "body",
+          "description": "<p>Custom property defined on an organization</p>",
+          "isRequired": true,
+          "childParamsGroups": [
+            {
+              "type": "string",
+              "name": "property_name",
+              "description": "<p>The name of the property</p>",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "value_type",
+              "description": "<p>The type of the value for the property</p>",
+              "isRequired": true,
+              "enum": [
+                "string",
+                "single_select"
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "required",
+              "description": "<p>Whether the property is required.</p>"
+            },
+            {
+              "type": "string or null",
+              "name": "default_value",
+              "description": "<p>Default value of the property</p>"
+            },
+            {
+              "type": "string or null",
+              "name": "description",
+              "description": "<p>Short description of the property</p>"
+            },
+            {
+              "type": "array of strings or null",
+              "name": "allowed_values",
+              "description": "<p>An ordered list of the allowed values of the property.\nThe property can have up to 200 allowed values.</p>"
+            },
+            {
+              "type": "string or null",
+              "name": "values_editable_by",
+              "description": "<p>Who can edit the values of the property</p>",
+              "enum": [
+                "org_actors",
+                "org_and_repo_actors",
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "installation",
+          "in": "body",
+          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "organization",
+          "in": "body",
+          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "sender",
+          "in": "body",
+          "description": "<p>The GitHub user that triggered the event. This property is included in every webhook payload.</p>",
+          "childParamsGroups": []
+        }
+      ],
+      "availability": [
+        "organization",
+        "app"
+      ],
+      "action": "updated",
+      "category": "custom_property"
+    }
+  },
+  "custom_property_values": {
+    "updated": {
+      "descriptionHtml": "<p>The custom property values of a repository were updated.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to custom property values for a repository.</p>\n<p>For more information, see \"<a href=\"https://docs.github.com/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization\">Managing custom properties for repositories in your organization</a>\". For information about the APIs to manage custom properties for a repository, see \"<a href=\"https://docs.github.com/rest/repos/custom-properties\">Custom properties</a>\" in the REST API documentation.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Custom properties\" organization permission.</p>",
+      "bodyParameters": [
+        {
+          "type": "string",
+          "name": "action",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "enum": [
+            "updated"
+          ],
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "installation",
+          "in": "body",
+          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "repository",
+          "in": "body",
+          "description": "<p>The repository on GitHub where the event occurred. Webhook payloads contain the <code>repository</code> property\nwhen the event occurs from activity in a repository.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "organization",
+          "in": "body",
+          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "sender",
+          "in": "body",
+          "description": "<p>The GitHub user that triggered the event. This property is included in every webhook payload.</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "array of objects",
+          "name": "new_property_values",
+          "in": "body",
+          "description": "<p>The new custom property values for the repository.</p>",
+          "isRequired": true,
+          "childParamsGroups": [
+            {
+              "type": "string",
+              "name": "property_name",
+              "description": "<p>The name of the property</p>",
+              "isRequired": true
+            },
+            {
+              "type": "null or string or array",
+              "name": "value",
+              "description": "<p>The value assigned to the property</p>",
+              "isRequired": true
+            }
+          ]
+        },
+        {
+          "type": "array of objects",
+          "name": "old_property_values",
+          "in": "body",
+          "description": "<p>The old custom property values for the repository.</p>",
+          "isRequired": true,
+          "childParamsGroups": [
+            {
+              "type": "string",
+              "name": "property_name",
+              "description": "<p>The name of the property</p>",
+              "isRequired": true
+            },
+            {
+              "type": "null or string or array",
+              "name": "value",
+              "description": "<p>The value assigned to the property</p>",
+              "isRequired": true
+            }
+          ]
+        }
+      ],
+      "availability": [
+        "repository",
+        "organization",
+        "app"
+      ],
+      "action": "updated",
+      "category": "custom_property_values"
+    }
+  },
   "delete": {
     "default": {
       "descriptionHtml": "",
@@ -14955,7 +15343,7 @@
   },
   "dependabot_alert": {
     "auto_dismissed": {
-      "descriptionHtml": "<p>A Dependabot alert was automatically closed.</p>",
+      "descriptionHtml": "<p>A Dependabot alert was automatically closed by a Dependabot auto-triage rule.</p>",
       "summaryHtml": "<p>This event occurs when there is activity relating to Dependabot alerts.</p>\n<p>For more information about Dependabot alerts, see \"<a href=\"https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\" For information about the API to manage Dependabot alerts, see \"<a href=\"https://docs.github.com/rest/dependabot/alerts\">Dependabot alerts</a>\" in the REST API documentation.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Dependabot alerts\" repository permission.</p>\n<p><strong>Note</strong>: Webhook events for Dependabot alerts are currently in beta and subject to change.</p>",
       "bodyParameters": [
         {
@@ -15537,7 +15925,7 @@
       "category": "dependabot_alert"
     },
     "auto_reopened": {
-      "descriptionHtml": "<p>A Dependabot alert was automatically reopened.</p>",
+      "descriptionHtml": "<p>A Dependabot alert, that had been automatically closed by a Dependabot auto-triage rule, was automatically reopened because the alert metadata or rule changed.</p>",
       "summaryHtml": "<p>This event occurs when there is activity relating to Dependabot alerts.</p>\n<p>For more information about Dependabot alerts, see \"<a href=\"https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\" For information about the API to manage Dependabot alerts, see \"<a href=\"https://docs.github.com/rest/dependabot/alerts\">Dependabot alerts</a>\" in the REST API documentation.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Dependabot alerts\" repository permission.</p>\n<p><strong>Note</strong>: Webhook events for Dependabot alerts are currently in beta and subject to change.</p>",
       "bodyParameters": [
         {
@@ -19480,7 +19868,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>workflow_job</code>, <code>pull_request_review_thread</code>, <code>merge_queue_entry</code>, <code>secret_scanning_alert_location</code>, <code>merge_group</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -30043,7 +30431,7 @@
             {
               "type": "string or null",
               "name": "conclusion",
-              "description": "<p>The result of the completed check run. Can be one of <code>success</code>, <code>failure</code>, <code>neutral</code>, <code>cancelled</code>, <code>timed_out</code>, <code>action_required</code> or <code>stale</code>. This value will be <code>null</code> until the check run has completed.</p>",
+              "description": "<p>The result of the completed check run. This value will be <code>null</code> until the check run has completed.</p>",
               "isRequired": true,
               "enum": [
                 "success",
@@ -30315,7 +30703,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>merge_queue_entry</code>, <code>workflow_job</code>, <code>pull_request_review_thread</code>, <code>secret_scanning_alert_location</code>, <code>merge_group</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -31049,7 +31437,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>pull_request_review_thread</code>, <code>merge_queue_entry</code>, <code>workflow_job</code>, <code>merge_group</code>, <code>secret_scanning_alert_location</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -40303,7 +40691,7 @@
                 {
                   "type": "integer",
                   "name": "size",
-                  "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>",
+                  "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>",
                   "isRequired": true
                 },
                 {
@@ -40328,6 +40716,11 @@
                   "type": "array of strings",
                   "name": "topics",
                   "description": ""
+                },
+                {
+                  "type": "object",
+                  "name": "custom_properties",
+                  "description": "<p>The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.</p>"
                 },
                 {
                   "type": "boolean",
@@ -46993,6 +47386,11 @@
               "isRequired": true
             },
             {
+              "type": "object",
+              "name": "custom_properties",
+              "description": "<p>The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.</p>"
+            },
+            {
               "type": "string",
               "name": "default_branch",
               "description": "<p>The default branch of the repository.</p>",
@@ -47651,34 +48049,6 @@
           "enum": [
             "revoked"
           ],
-          "childParamsGroups": []
-        },
-        {
-          "type": "object",
-          "name": "enterprise",
-          "in": "body",
-          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
-          "childParamsGroups": []
-        },
-        {
-          "type": "object",
-          "name": "installation",
-          "in": "body",
-          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
-          "childParamsGroups": []
-        },
-        {
-          "type": "object",
-          "name": "organization",
-          "in": "body",
-          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
-          "childParamsGroups": []
-        },
-        {
-          "type": "object",
-          "name": "repository",
-          "in": "body",
-          "description": "<p>The repository on GitHub where the event occurred. Webhook payloads contain the <code>repository</code> property\nwhen the event occurs from activity in a repository.</p>",
           "childParamsGroups": []
         },
         {
@@ -54054,7 +54424,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>reminder</code>, <code>pull_request_review_thread</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -56081,7 +56451,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>reminder</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -58361,7 +58731,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>security_and_analysis</code>, <code>pull_request_review_thread</code>, <code>reminder</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -59756,7 +60126,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>pull_request_review_thread</code>, <code>reminder</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -62723,7 +63093,7 @@
                     {
                       "type": "array of strings",
                       "name": "events",
-                      "description": "<p>The list of events for the GitHub app</p>"
+                      "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                     },
                     {
                       "type": "string or null",
@@ -63595,6 +63965,11 @@
                   "isRequired": true
                 },
                 {
+                  "type": "object",
+                  "name": "custom_properties",
+                  "description": "<p>The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.</p>"
+                },
+                {
                   "type": "string",
                   "name": "default_branch",
                   "description": "<p>The default branch of the repository.</p>",
@@ -63688,6 +64063,11 @@
                   "name": "git_url",
                   "description": "",
                   "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_discussions",
+                  "description": "<p>Whether the repository has discussions enabled.</p>"
                 },
                 {
                   "type": "boolean",
@@ -64190,6 +64570,11 @@
                   "name": "watchers_count",
                   "description": "",
                   "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "web_commit_signoff_required",
+                  "description": "<p>Whether to require commit signoff.</p>"
                 }
               ]
             }
@@ -64738,7 +65123,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>security_and_analysis</code>, <code>pull_request_review_thread</code>, <code>reminder</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -66080,7 +66465,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -68097,7 +68482,7 @@
                     {
                       "type": "array of strings",
                       "name": "events",
-                      "description": "<p>The list of events for the GitHub app</p>"
+                      "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                     },
                     {
                       "type": "string or null",
@@ -68967,6 +69352,11 @@
                   "name": "created_at",
                   "description": "",
                   "isRequired": true
+                },
+                {
+                  "type": "object",
+                  "name": "custom_properties",
+                  "description": "<p>The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.</p>"
                 },
                 {
                   "type": "string",
@@ -70123,7 +70513,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -71587,7 +71977,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>reminder</code>, <code>pull_request_review_thread</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -72932,7 +73322,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>reminder</code>, <code>pull_request_review_thread</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -75006,7 +75396,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -79684,7 +80074,7 @@
             {
               "type": "array of strings",
               "name": "events",
-              "description": "",
+              "description": "<p>undefinedSupported values are: <code>*</code>, <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>meta</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>package</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>pull_request_review_thread</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_import</code>, <code>repository_vulnerability_alert</code>, <code>secret_scanning_alert</code>, <code>secret_scanning_alert_location</code>, <code>security_and_analysis</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_job</code>, <code>workflow_run</code>, <code>repository_dispatch</code>, <code>projects_v2_item</code></p>",
               "isRequired": true
             },
             {
@@ -86597,8 +86987,8 @@
   },
   "project_card": {
     "converted": {
-      "descriptionHtml": "<p>A note in a classic project was converted to an issue.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A note in a project (classic) was converted to an issue.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -86879,8 +87269,8 @@
       "category": "project_card"
     },
     "created": {
-      "descriptionHtml": "<p>A card was added to a classic project.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A card was added to a project (classic).</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -87138,8 +87528,8 @@
       "category": "project_card"
     },
     "deleted": {
-      "descriptionHtml": "<p>A card on a classic project was deleted.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A card on a project (classic) was deleted.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -87398,8 +87788,8 @@
       "category": "project_card"
     },
     "edited": {
-      "descriptionHtml": "<p>A note on a classic project was edited.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A note on a project (classic) was edited.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -87680,8 +88070,8 @@
       "category": "project_card"
     },
     "moved": {
-      "descriptionHtml": "<p>A card on a classic project was moved to another column or to another position in its column.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A card on a project (classic) was moved to another column or to another position in its column.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -87965,8 +88355,8 @@
   },
   "project": {
     "closed": {
-      "descriptionHtml": "<p>A classic project was closed.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A project (classic) was closed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -88230,8 +88620,8 @@
       "category": "project"
     },
     "created": {
-      "descriptionHtml": "<p>A classic project was created.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A project (classic) was created.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -88495,8 +88885,8 @@
       "category": "project"
     },
     "deleted": {
-      "descriptionHtml": "<p>A classic project was deleted.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A project (classic) was deleted.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -88759,8 +89149,8 @@
       "category": "project"
     },
     "edited": {
-      "descriptionHtml": "<p>The name or description of a classic project was changed.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>The name or description of a project (classic) was changed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -89057,8 +89447,8 @@
       "category": "project"
     },
     "reopened": {
-      "descriptionHtml": "<p>A classic project was closed.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A project (classic) was closed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -89324,8 +89714,8 @@
   },
   "project_column": {
     "created": {
-      "descriptionHtml": "<p>A column was added to a classic project.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a card on a project, use the <code>project</code> and <code>project_card</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A column was added to a project (classic).</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a card on a project (classic), use the <code>project</code> and <code>project_card</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -89445,8 +89835,8 @@
       "category": "project_column"
     },
     "deleted": {
-      "descriptionHtml": "<p>A column was deleted from a classic project.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a card on a project, use the <code>project</code> and <code>project_card</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A column was deleted from a project (classic).</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a card on a project (classic), use the <code>project</code> and <code>project_card</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -89566,8 +89956,8 @@
       "category": "project_column"
     },
     "edited": {
-      "descriptionHtml": "<p>The name of a column on a classic project was changed.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a card on a project, use the <code>project</code> and <code>project_card</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>The name of a column on a project (classic) was changed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a card on a project (classic), use the <code>project</code> and <code>project_card</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -89709,8 +90099,8 @@
       "category": "project_column"
     },
     "moved": {
-      "descriptionHtml": "<p>A column was moved to a new position on a classic project.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a classic project. For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a card on a project, use the <code>project</code> and <code>project_card</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A column was moved to a new position on a project (classic).</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a project (classic). For more information, see \"<a href=\"https://docs.github.com/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a card on a project (classic), use the <code>project</code> and <code>project_card</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -117341,7 +117731,7 @@
       "category": "pull_request"
     },
     "edited": {
-      "descriptionHtml": "<p>The title or body of a pull request was edited.</p>",
+      "descriptionHtml": "<p>The title or body of a pull request was edited, or the base branch of a pull request was changed.</p>",
       "summaryHtml": "<p>This event occurs when there is activity on a pull request. For more information, see \"<a href=\"https://docs.github.com/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests\">About pull requests</a>.\" For information about the APIs to manage pull requests, see <a href=\"https://docs.github.com/graphql/reference/objects#pullrequest\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/pulls/pulls\">Pulls</a>\" in the REST API documentation.</p>\n<p>For activity related to pull request reviews, pull request review comments, pull request comments, or pull request review threads, use the <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>issue_comment</code>, or <code>pull_request_review_thread</code> events instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Pull requests\" repository permission.</p>",
       "bodyParameters": [
         {
@@ -200823,7 +201213,7 @@
   "repository_ruleset": {
     "created": {
       "descriptionHtml": "<p>A repository ruleset was created.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to repository rulesets.\nFor more information about repository rulesets, see \"<a href=\"https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets\">Managing rulesets</a>.\"\nFor more information on managing rulesets via the APIs, see <a href=\"https://docs.github.com/graphql/reference/objects#repositoryruleset\">Repository ruleset</a> in the GraphQL documentation or \"<a href=\"https://docs.github.com/rest/repos/rules\">Repository rules</a>\" and \"<a href=\"https://docs.github.com/rest/orgs/rules\">Organization rules</a> in the REST API documentation.\"</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Administration\" repository permission.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to repository rulesets.\nFor more information about repository rulesets, see \"<a href=\"https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets\">Managing rulesets</a>.\"\nFor more information on managing rulesets via the APIs, see <a href=\"https://docs.github.com/graphql/reference/objects#repositoryruleset\">Repository ruleset</a> in the GraphQL documentation or \"<a href=\"https://docs.github.com/rest/repos/rules\">Repository rules</a>\" and \"<a href=\"https://docs.github.com/rest/orgs/rules\">Organization rules</a> in the REST API documentation.\"</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Administration\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -200926,7 +201316,7 @@
                 {
                   "type": "integer",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset</p>",
+                  "description": "<p>The ID of the actor that can bypass a ruleset. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>.</p>",
                   "isRequired": true
                 },
                 {
@@ -201000,28 +201390,9 @@
               ]
             },
             {
-              "type": "object",
+              "type": "null or object",
               "name": "conditions",
-              "description": "<p>Parameters for a repository ruleset ref name condition</p>",
-              "childParamsGroups": [
-                {
-                  "type": "object",
-                  "name": "ref_name",
-                  "description": "",
-                  "childParamsGroups": [
-                    {
-                      "type": "array of strings",
-                      "name": "include",
-                      "description": "<p>Array of ref names or patterns to include. One of these patterns must match for the condition to pass. Also accepts <code>~DEFAULT_BRANCH</code> to include the default branch or <code>~ALL</code> to include all branches.</p>"
-                    },
-                    {
-                      "type": "array of strings",
-                      "name": "exclude",
-                      "description": "<p>Array of ref names or patterns to exclude. The condition will not pass if any of these patterns match.</p>"
-                    }
-                  ]
-                }
-              ]
+              "description": ""
             },
             {
               "type": "array of objects",
@@ -201120,7 +201491,7 @@
                 {
                   "type": "object",
                   "name": "required_deployments",
-                  "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
+                  "description": "<p>Choose which environments must be successfully deployed to before refs can be pushed into a ref that matches this rule.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201227,7 +201598,7 @@
                 {
                   "type": "object",
                   "name": "required_status_checks",
-                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
+                  "description": "<p>Choose which status checks must pass before the ref is updated. When enabled, commits must first be pushed to another ref where the checks pass.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -201563,6 +201934,62 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "object",
+                  "name": "workflows",
+                  "description": "<p>Require all changes made to a targeted branch to pass the specified workflows before they can be merged.</p>",
+                  "isRequired": [
+                    "type"
+                  ],
+                  "childParamsGroups": [
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "",
+                      "isRequired": true,
+                      "enum": [
+                        "workflows"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "parameters",
+                      "description": "",
+                      "childParamsGroups": [
+                        {
+                          "type": "array of objects",
+                          "name": "workflows",
+                          "description": "<p>Workflows that must pass for this rule to pass.</p>",
+                          "isRequired": true,
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "path",
+                              "description": "<p>The path to the workflow file</p>",
+                              "isRequired": true
+                            },
+                            {
+                              "type": "string",
+                              "name": "ref",
+                              "description": "<p>The ref (branch or tag) of the workflow file to use</p>"
+                            },
+                            {
+                              "type": "integer",
+                              "name": "repository_id",
+                              "description": "<p>The ID of the repository where the workflow is defined</p>",
+                              "isRequired": true
+                            },
+                            {
+                              "type": "string",
+                              "name": "sha",
+                              "description": "<p>The commit SHA of the workflow file to use</p>"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ],
               "oneOfObject": true
@@ -201598,7 +202025,7 @@
     },
     "deleted": {
       "descriptionHtml": "<p>A repository ruleset was deleted.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to repository rulesets.\nFor more information about repository rulesets, see \"<a href=\"https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets\">Managing rulesets</a>.\"\nFor more information on managing rulesets via the APIs, see <a href=\"https://docs.github.com/graphql/reference/objects#repositoryruleset\">Repository ruleset</a> in the GraphQL documentation or \"<a href=\"https://docs.github.com/rest/repos/rules\">Repository rules</a>\" and \"<a href=\"https://docs.github.com/rest/orgs/rules\">Organization rules</a> in the REST API documentation.\"</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Administration\" repository permission.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to repository rulesets.\nFor more information about repository rulesets, see \"<a href=\"https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets\">Managing rulesets</a>.\"\nFor more information on managing rulesets via the APIs, see <a href=\"https://docs.github.com/graphql/reference/objects#repositoryruleset\">Repository ruleset</a> in the GraphQL documentation or \"<a href=\"https://docs.github.com/rest/repos/rules\">Repository rules</a>\" and \"<a href=\"https://docs.github.com/rest/orgs/rules\">Organization rules</a> in the REST API documentation.\"</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Administration\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -201701,7 +202128,7 @@
                 {
                   "type": "integer",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset</p>",
+                  "description": "<p>The ID of the actor that can bypass a ruleset. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>.</p>",
                   "isRequired": true
                 },
                 {
@@ -201775,28 +202202,9 @@
               ]
             },
             {
-              "type": "object",
+              "type": "null or object",
               "name": "conditions",
-              "description": "<p>Parameters for a repository ruleset ref name condition</p>",
-              "childParamsGroups": [
-                {
-                  "type": "object",
-                  "name": "ref_name",
-                  "description": "",
-                  "childParamsGroups": [
-                    {
-                      "type": "array of strings",
-                      "name": "include",
-                      "description": "<p>Array of ref names or patterns to include. One of these patterns must match for the condition to pass. Also accepts <code>~DEFAULT_BRANCH</code> to include the default branch or <code>~ALL</code> to include all branches.</p>"
-                    },
-                    {
-                      "type": "array of strings",
-                      "name": "exclude",
-                      "description": "<p>Array of ref names or patterns to exclude. The condition will not pass if any of these patterns match.</p>"
-                    }
-                  ]
-                }
-              ]
+              "description": ""
             },
             {
               "type": "array of objects",
@@ -201895,7 +202303,7 @@
                 {
                   "type": "object",
                   "name": "required_deployments",
-                  "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
+                  "description": "<p>Choose which environments must be successfully deployed to before refs can be pushed into a ref that matches this rule.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202002,7 +202410,7 @@
                 {
                   "type": "object",
                   "name": "required_status_checks",
-                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
+                  "description": "<p>Choose which status checks must pass before the ref is updated. When enabled, commits must first be pushed to another ref where the checks pass.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202338,6 +202746,62 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "object",
+                  "name": "workflows",
+                  "description": "<p>Require all changes made to a targeted branch to pass the specified workflows before they can be merged.</p>",
+                  "isRequired": [
+                    "type"
+                  ],
+                  "childParamsGroups": [
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "",
+                      "isRequired": true,
+                      "enum": [
+                        "workflows"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "parameters",
+                      "description": "",
+                      "childParamsGroups": [
+                        {
+                          "type": "array of objects",
+                          "name": "workflows",
+                          "description": "<p>Workflows that must pass for this rule to pass.</p>",
+                          "isRequired": true,
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "path",
+                              "description": "<p>The path to the workflow file</p>",
+                              "isRequired": true
+                            },
+                            {
+                              "type": "string",
+                              "name": "ref",
+                              "description": "<p>The ref (branch or tag) of the workflow file to use</p>"
+                            },
+                            {
+                              "type": "integer",
+                              "name": "repository_id",
+                              "description": "<p>The ID of the repository where the workflow is defined</p>",
+                              "isRequired": true
+                            },
+                            {
+                              "type": "string",
+                              "name": "sha",
+                              "description": "<p>The commit SHA of the workflow file to use</p>"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ],
               "oneOfObject": true
@@ -202373,7 +202837,7 @@
     },
     "edited": {
       "descriptionHtml": "<p>A repository ruleset was edited.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to repository rulesets.\nFor more information about repository rulesets, see \"<a href=\"https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets\">Managing rulesets</a>.\"\nFor more information on managing rulesets via the APIs, see <a href=\"https://docs.github.com/graphql/reference/objects#repositoryruleset\">Repository ruleset</a> in the GraphQL documentation or \"<a href=\"https://docs.github.com/rest/repos/rules\">Repository rules</a>\" and \"<a href=\"https://docs.github.com/rest/orgs/rules\">Organization rules</a> in the REST API documentation.\"</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Administration\" repository permission.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to repository rulesets.\nFor more information about repository rulesets, see \"<a href=\"https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets\">Managing rulesets</a>.\"\nFor more information on managing rulesets via the APIs, see <a href=\"https://docs.github.com/graphql/reference/objects#repositoryruleset\">Repository ruleset</a> in the GraphQL documentation or \"<a href=\"https://docs.github.com/rest/repos/rules\">Repository rules</a>\" and \"<a href=\"https://docs.github.com/rest/orgs/rules\">Organization rules</a> in the REST API documentation.\"</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Administration\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -202476,7 +202940,7 @@
                 {
                   "type": "integer",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset</p>",
+                  "description": "<p>The ID of the actor that can bypass a ruleset. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>.</p>",
                   "isRequired": true
                 },
                 {
@@ -202550,28 +203014,9 @@
               ]
             },
             {
-              "type": "object",
+              "type": "null or object",
               "name": "conditions",
-              "description": "<p>Parameters for a repository ruleset ref name condition</p>",
-              "childParamsGroups": [
-                {
-                  "type": "object",
-                  "name": "ref_name",
-                  "description": "",
-                  "childParamsGroups": [
-                    {
-                      "type": "array of strings",
-                      "name": "include",
-                      "description": "<p>Array of ref names or patterns to include. One of these patterns must match for the condition to pass. Also accepts <code>~DEFAULT_BRANCH</code> to include the default branch or <code>~ALL</code> to include all branches.</p>"
-                    },
-                    {
-                      "type": "array of strings",
-                      "name": "exclude",
-                      "description": "<p>Array of ref names or patterns to exclude. The condition will not pass if any of these patterns match.</p>"
-                    }
-                  ]
-                }
-              ]
+              "description": ""
             },
             {
               "type": "array of objects",
@@ -202670,7 +203115,7 @@
                 {
                   "type": "object",
                   "name": "required_deployments",
-                  "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
+                  "description": "<p>Choose which environments must be successfully deployed to before refs can be pushed into a ref that matches this rule.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -202777,7 +203222,7 @@
                 {
                   "type": "object",
                   "name": "required_status_checks",
-                  "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
+                  "description": "<p>Choose which status checks must pass before the ref is updated. When enabled, commits must first be pushed to another ref where the checks pass.</p>",
                   "isRequired": [
                     "type"
                   ],
@@ -203109,6 +203554,62 @@
                           "name": "pattern",
                           "description": "<p>The pattern to match with.</p>",
                           "isRequired": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "object",
+                  "name": "workflows",
+                  "description": "<p>Require all changes made to a targeted branch to pass the specified workflows before they can be merged.</p>",
+                  "isRequired": [
+                    "type"
+                  ],
+                  "childParamsGroups": [
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "",
+                      "isRequired": true,
+                      "enum": [
+                        "workflows"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "parameters",
+                      "description": "",
+                      "childParamsGroups": [
+                        {
+                          "type": "array of objects",
+                          "name": "workflows",
+                          "description": "<p>Workflows that must pass for this rule to pass.</p>",
+                          "isRequired": true,
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "path",
+                              "description": "<p>The path to the workflow file</p>",
+                              "isRequired": true
+                            },
+                            {
+                              "type": "string",
+                              "name": "ref",
+                              "description": "<p>The ref (branch or tag) of the workflow file to use</p>"
+                            },
+                            {
+                              "type": "integer",
+                              "name": "repository_id",
+                              "description": "<p>The ID of the repository where the workflow is defined</p>",
+                              "isRequired": true
+                            },
+                            {
+                              "type": "string",
+                              "name": "sha",
+                              "description": "<p>The commit SHA of the workflow file to use</p>"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -203402,7 +203903,7 @@
                     {
                       "type": "object",
                       "name": "required_deployments",
-                      "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
+                      "description": "<p>Choose which environments must be successfully deployed to before refs can be pushed into a ref that matches this rule.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203509,7 +204010,7 @@
                     {
                       "type": "object",
                       "name": "required_status_checks",
-                      "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
+                      "description": "<p>Choose which status checks must pass before the ref is updated. When enabled, commits must first be pushed to another ref where the checks pass.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -203841,6 +204342,62 @@
                               "name": "pattern",
                               "description": "<p>The pattern to match with.</p>",
                               "isRequired": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "workflows",
+                      "description": "<p>Require all changes made to a targeted branch to pass the specified workflows before they can be merged.</p>",
+                      "isRequired": [
+                        "type"
+                      ],
+                      "childParamsGroups": [
+                        {
+                          "type": "string",
+                          "name": "type",
+                          "description": "",
+                          "isRequired": true,
+                          "enum": [
+                            "workflows"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "parameters",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "array of objects",
+                              "name": "workflows",
+                              "description": "<p>Workflows that must pass for this rule to pass.</p>",
+                              "isRequired": true,
+                              "childParamsGroups": [
+                                {
+                                  "type": "string",
+                                  "name": "path",
+                                  "description": "<p>The path to the workflow file</p>",
+                                  "isRequired": true
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "ref",
+                                  "description": "<p>The ref (branch or tag) of the workflow file to use</p>"
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "repository_id",
+                                  "description": "<p>The ID of the repository where the workflow is defined</p>",
+                                  "isRequired": true
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "sha",
+                                  "description": "<p>The commit SHA of the workflow file to use</p>"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -203946,7 +204503,7 @@
                     {
                       "type": "object",
                       "name": "required_deployments",
-                      "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
+                      "description": "<p>Choose which environments must be successfully deployed to before refs can be pushed into a ref that matches this rule.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -204053,7 +204610,7 @@
                     {
                       "type": "object",
                       "name": "required_status_checks",
-                      "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
+                      "description": "<p>Choose which status checks must pass before the ref is updated. When enabled, commits must first be pushed to another ref where the checks pass.</p>",
                       "isRequired": [
                         "type"
                       ],
@@ -204385,6 +204942,62 @@
                               "name": "pattern",
                               "description": "<p>The pattern to match with.</p>",
                               "isRequired": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "workflows",
+                      "description": "<p>Require all changes made to a targeted branch to pass the specified workflows before they can be merged.</p>",
+                      "isRequired": [
+                        "type"
+                      ],
+                      "childParamsGroups": [
+                        {
+                          "type": "string",
+                          "name": "type",
+                          "description": "",
+                          "isRequired": true,
+                          "enum": [
+                            "workflows"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "parameters",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "array of objects",
+                              "name": "workflows",
+                              "description": "<p>Workflows that must pass for this rule to pass.</p>",
+                              "isRequired": true,
+                              "childParamsGroups": [
+                                {
+                                  "type": "string",
+                                  "name": "path",
+                                  "description": "<p>The path to the workflow file</p>",
+                                  "isRequired": true
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "ref",
+                                  "description": "<p>The ref (branch or tag) of the workflow file to use</p>"
+                                },
+                                {
+                                  "type": "integer",
+                                  "name": "repository_id",
+                                  "description": "<p>The ID of the repository where the workflow is defined</p>",
+                                  "isRequired": true
+                                },
+                                {
+                                  "type": "string",
+                                  "name": "sha",
+                                  "description": "<p>The commit SHA of the workflow file to use</p>"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -204495,7 +205108,7 @@
                         {
                           "type": "object",
                           "name": "required_deployments",
-                          "description": "<p>Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule.</p>",
+                          "description": "<p>Choose which environments must be successfully deployed to before refs can be pushed into a ref that matches this rule.</p>",
                           "isRequired": [
                             "type"
                           ],
@@ -204602,7 +205215,7 @@
                         {
                           "type": "object",
                           "name": "required_status_checks",
-                          "description": "<p>Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed.</p>",
+                          "description": "<p>Choose which status checks must pass before the ref is updated. When enabled, commits must first be pushed to another ref where the checks pass.</p>",
                           "isRequired": [
                             "type"
                           ],
@@ -204934,6 +205547,62 @@
                                   "name": "pattern",
                                   "description": "<p>The pattern to match with.</p>",
                                   "isRequired": true
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "workflows",
+                          "description": "<p>Require all changes made to a targeted branch to pass the specified workflows before they can be merged.</p>",
+                          "isRequired": [
+                            "type"
+                          ],
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "type",
+                              "description": "",
+                              "isRequired": true,
+                              "enum": [
+                                "workflows"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "name": "parameters",
+                              "description": "",
+                              "childParamsGroups": [
+                                {
+                                  "type": "array of objects",
+                                  "name": "workflows",
+                                  "description": "<p>Workflows that must pass for this rule to pass.</p>",
+                                  "isRequired": true,
+                                  "childParamsGroups": [
+                                    {
+                                      "type": "string",
+                                      "name": "path",
+                                      "description": "<p>The path to the workflow file</p>",
+                                      "isRequired": true
+                                    },
+                                    {
+                                      "type": "string",
+                                      "name": "ref",
+                                      "description": "<p>The ref (branch or tag) of the workflow file to use</p>"
+                                    },
+                                    {
+                                      "type": "integer",
+                                      "name": "repository_id",
+                                      "description": "<p>The ID of the repository where the workflow is defined</p>",
+                                      "isRequired": true
+                                    },
+                                    {
+                                      "type": "string",
+                                      "name": "sha",
+                                      "description": "<p>The commit SHA of the workflow file to use</p>"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -206368,6 +207037,16 @@
               "description": "<p>The type of secret that secret scanning detected.</p>"
             },
             {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
+            },
+            {
               "type": "boolean or null",
               "name": "push_protection_bypassed",
               "description": "<p>Whether push protection was bypassed for the detected secret.</p>"
@@ -206764,6 +207443,16 @@
               "type": "string",
               "name": "secret_type",
               "description": "<p>The type of secret that secret scanning detected.</p>"
+            },
+            {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
             },
             {
               "type": "boolean or null",
@@ -207164,6 +207853,16 @@
               "description": "<p>The type of secret that secret scanning detected.</p>"
             },
             {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
+            },
+            {
               "type": "boolean or null",
               "name": "push_protection_bypassed",
               "description": "<p>Whether push protection was bypassed for the detected secret.</p>"
@@ -207562,6 +208261,16 @@
               "description": "<p>The type of secret that secret scanning detected.</p>"
             },
             {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
+            },
+            {
               "type": "boolean or null",
               "name": "push_protection_bypassed",
               "description": "<p>Whether push protection was bypassed for the detected secret.</p>"
@@ -207746,6 +208455,414 @@
         "app"
       ],
       "action": "revoked",
+      "category": "secret_scanning_alert"
+    },
+    "validated": {
+      "descriptionHtml": "<p>A secret scanning alert was validated.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a secret scanning alert. For more information about secret scanning, see \"<a href=\"https://docs.github.com/code-security/secret-scanning/about-secret-scanning\">About secret scanning</a>.\" For information about the API to manage secret scanning alerts, see \"<a href=\"https://docs.github.com/rest/secret-scanning\">Secret scanning</a>\" in the REST API documentation.</p>\n<p>For activity relating to secret scanning alert locations, use the <code>secret_scanning_alert_location</code> event.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Secret scanning alerts\" repository permission.</p>",
+      "bodyParameters": [
+        {
+          "type": "string",
+          "name": "action",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "enum": [
+            "validated"
+          ],
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "alert",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "childParamsGroups": [
+            {
+              "type": "integer",
+              "name": "number",
+              "description": "<p>The security alert number.</p>"
+            },
+            {
+              "type": "string",
+              "name": "created_at",
+              "description": "<p>The time that the alert was created in ISO 8601 format: <code>YYYY-MM-DDTHH:MM:SSZ</code>.</p>"
+            },
+            {
+              "type": "null",
+              "name": "updated_at",
+              "description": ""
+            },
+            {
+              "type": "string",
+              "name": "url",
+              "description": "<p>The REST API URL of the alert resource.</p>"
+            },
+            {
+              "type": "string",
+              "name": "html_url",
+              "description": "<p>The GitHub URL of the alert resource.</p>"
+            },
+            {
+              "type": "string",
+              "name": "locations_url",
+              "description": "<p>The REST API URL of the code locations for this alert.</p>"
+            },
+            {
+              "type": "string or null",
+              "name": "resolution",
+              "description": "<p>The reason for resolving the alert.</p>",
+              "enum": [
+                "false_positive",
+                "wont_fix",
+                "revoked",
+                "used_in_tests",
+                "pattern_deleted",
+                "pattern_edited",
+                null
+              ]
+            },
+            {
+              "type": "string or null",
+              "name": "resolved_at",
+              "description": "<p>The time that the alert was resolved in ISO 8601 format: <code>YYYY-MM-DDTHH:MM:SSZ</code>.</p>"
+            },
+            {
+              "type": "object",
+              "name": "resolved_by",
+              "description": "<p>A GitHub user.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "type": "string or null",
+              "name": "resolution_comment",
+              "description": "<p>An optional comment to resolve an alert.</p>"
+            },
+            {
+              "type": "string",
+              "name": "secret_type",
+              "description": "<p>The type of secret that secret scanning detected.</p>"
+            },
+            {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
+            },
+            {
+              "type": "boolean or null",
+              "name": "push_protection_bypassed",
+              "description": "<p>Whether push protection was bypassed for the detected secret.</p>"
+            },
+            {
+              "type": "object",
+              "name": "push_protection_bypassed_by",
+              "description": "<p>A GitHub user.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "type": "string or null",
+              "name": "push_protection_bypassed_at",
+              "description": "<p>The time that push protection was bypassed in ISO 8601 format: <code>YYYY-MM-DDTHH:MM:SSZ</code>.</p>"
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "installation",
+          "in": "body",
+          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "organization",
+          "in": "body",
+          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "repository",
+          "in": "body",
+          "description": "<p>The repository on GitHub where the event occurred. Webhook payloads contain the <code>repository</code> property\nwhen the event occurs from activity in a repository.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "sender",
+          "in": "body",
+          "description": "<p>The GitHub user that triggered the event. This property is included in every webhook payload.</p>",
+          "childParamsGroups": []
+        }
+      ],
+      "availability": [
+        "repository",
+        "organization",
+        "app"
+      ],
+      "action": "validated",
       "category": "secret_scanning_alert"
     }
   },
@@ -207961,6 +209078,16 @@
               "description": "<p>The type of secret that secret scanning detected.</p>"
             },
             {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
+            },
+            {
               "type": "boolean or null",
               "name": "push_protection_bypassed",
               "description": "<p>Whether push protection was bypassed for the detected secret.</p>"
@@ -208119,13 +209246,21 @@
             {
               "type": "string",
               "name": "type",
-              "description": "<p>The location type. Because secrets may be found in different types of resources (ie. code, comments, issues), this field identifies the type of resource where the secret was found.</p>",
+              "description": "<p>The location type. Because secrets may be found in different types of resources (ie. code, comments, issues, pull requests, discussions), this field identifies the type of resource where the secret was found.</p>",
               "isRequired": true,
               "enum": [
                 "commit",
                 "issue_title",
                 "issue_body",
-                "issue_comment"
+                "issue_comment",
+                "discussion_title",
+                "discussion_body",
+                "discussion_comment",
+                "pull_request_title",
+                "pull_request_body",
+                "pull_request_comment",
+                "pull_request_review",
+                "pull_request_review_comment"
               ]
             },
             {
@@ -208172,7 +209307,7 @@
   "security_advisory": {
     "published": {
       "descriptionHtml": "<p>A security advisory was published to the GitHub community.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a security advisory that was reviewed by GitHub. A GitHub-reviewed security advisory provides information about security-related vulnerabilities in software on GitHub. For more information about security advisories, see \"<a href=\"https://docs.github.com/code-security/repository-security-advisories/about-github-security-advisories-for-repositories\">About GitHub Security Advisories for repositories</a>.\" For information about the API to manage security advisories, see <a href=\"https://docs.github.com/graphql/reference/objects#securityadvisory\">the GraphQL documentation</a>.</p>\n<p>GitHub Dependabot alerts are also powered by the security advisory dataset. For more information, see \"<a href=\"https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\"</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a global security advisory that was reviewed by GitHub. A GitHub-reviewed global security advisory provides information about security vulnerabilities or malware that have been mapped to packages in ecosystems we support. For more information about global security advisories, see \"<a href=\"https://docs.github.com/code-security/security-advisories/working-with-global-security-advisories-from-the-github-advisory-database/about-global-security-advisories\">About global security advisories</a>.\" For information about the API to manage security advisories, see <a href=\"https://docs.github.com/rest/security-advisories/global-advisories\">the REST API documentation</a> or <a href=\"https://docs.github.com/graphql/reference/objects#securityadvisory\">the GraphQL documentation</a>.</p>\n<p>GitHub Dependabot alerts are also powered by the security advisory dataset. For more information, see \"<a href=\"https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\"</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -208407,8 +209542,8 @@
       "category": "security_advisory"
     },
     "updated": {
-      "descriptionHtml": "<p>The metadata or description of a security advisory was changed, or the security advisory was withdrawn.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a security advisory that was reviewed by GitHub. A GitHub-reviewed security advisory provides information about security-related vulnerabilities in software on GitHub. For more information about security advisories, see \"<a href=\"https://docs.github.com/code-security/repository-security-advisories/about-github-security-advisories-for-repositories\">About GitHub Security Advisories for repositories</a>.\" For information about the API to manage security advisories, see <a href=\"https://docs.github.com/graphql/reference/objects#securityadvisory\">the GraphQL documentation</a>.</p>\n<p>GitHub Dependabot alerts are also powered by the security advisory dataset. For more information, see \"<a href=\"https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\"</p>",
+      "descriptionHtml": "<p>The metadata or description of a security advisory was changed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a global security advisory that was reviewed by GitHub. A GitHub-reviewed global security advisory provides information about security vulnerabilities or malware that have been mapped to packages in ecosystems we support. For more information about global security advisories, see \"<a href=\"https://docs.github.com/code-security/security-advisories/working-with-global-security-advisories-from-the-github-advisory-database/about-global-security-advisories\">About global security advisories</a>.\" For information about the API to manage security advisories, see <a href=\"https://docs.github.com/rest/security-advisories/global-advisories\">the REST API documentation</a> or <a href=\"https://docs.github.com/graphql/reference/objects#securityadvisory\">the GraphQL documentation</a>.</p>\n<p>GitHub Dependabot alerts are also powered by the security advisory dataset. For more information, see \"<a href=\"https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\"</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -208644,7 +209779,7 @@
     },
     "withdrawn": {
       "descriptionHtml": "<p>A previously published security advisory was withdrawn.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a security advisory that was reviewed by GitHub. A GitHub-reviewed security advisory provides information about security-related vulnerabilities in software on GitHub. For more information about security advisories, see \"<a href=\"https://docs.github.com/code-security/repository-security-advisories/about-github-security-advisories-for-repositories\">About GitHub Security Advisories for repositories</a>.\" For information about the API to manage security advisories, see <a href=\"https://docs.github.com/graphql/reference/objects#securityadvisory\">the GraphQL documentation</a>.</p>\n<p>GitHub Dependabot alerts are also powered by the security advisory dataset. For more information, see \"<a href=\"https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\"</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a global security advisory that was reviewed by GitHub. A GitHub-reviewed global security advisory provides information about security vulnerabilities or malware that have been mapped to packages in ecosystems we support. For more information about global security advisories, see \"<a href=\"https://docs.github.com/code-security/security-advisories/working-with-global-security-advisories-from-the-github-advisory-database/about-global-security-advisories\">About global security advisories</a>.\" For information about the API to manage security advisories, see <a href=\"https://docs.github.com/rest/security-advisories/global-advisories\">the REST API documentation</a> or <a href=\"https://docs.github.com/graphql/reference/objects#securityadvisory\">the GraphQL documentation</a>.</p>\n<p>GitHub Dependabot alerts are also powered by the security advisory dataset. For more information, see \"<a href=\"https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\"</p>",
       "bodyParameters": [
         {
           "type": "string",

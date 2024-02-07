@@ -1,13 +1,13 @@
 ---
 title: Troubleshooting authentication to a repository
-intro: Learn how to troubleshoot common authentication issues when you clone, push to, or pull from a repository in a codespace.
+intro: 'Learn how to troubleshoot common authentication issues when you clone, push to, or pull from a repository in a codespace.'
 versions:
   fpt: '*'
   ghec: '*'
 type: reference
 topics:
   - Codespaces
-shortTitle: Authenticating to repos
+shortTitle: Authenticating to repositories
 ---
 
 When you create a codespace for a repository, you can generally use `git pull` and `git push` to pull and push changes to that repository without any additional authentication. However, occasionally you may see authentication errors when trying to run these operations.
@@ -43,9 +43,9 @@ The `GITHUB_TOKEN` in a codespace is configured with read and write access to th
 
 We do not recommend manually updating the value of the `GITHUB_TOKEN` in a codespace. If your project requires access to other repositories, you can give codespaces access to these repositories by listing additional permissions in your dev container configuration. This will allow users to authorize the additional permissions when they create a codespace. However, it will not change the permissions of an existing codespace. For more information, see "[AUTOTITLE](/codespaces/managing-your-codespaces/managing-repository-access-for-your-codespaces)."
 
-If you need access to another repository in an existing codespace, or if the permissions you need are specific to you and don't apply to other contributors, you can create a {% data variables.product.pat_generic %} with access to the repository and add the token to your codespace. We recommend you limit the token's access by using a {% data variables.product.pat_v2 %}, selecting only the repositories to which you need access, and giving the required access to the **Contents** permission only. For more information, see "[AUTOTITLE](/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token)."
+If you need access to another repository in an existing codespace, or if the permissions you need are specific to you and don't apply to other contributors, you can create a {% data variables.product.pat_generic %} with access to the repository and add the token to your codespace. We recommend you limit the token's access by using a {% data variables.product.pat_v2 %}, selecting only the repositories to which you need access, and giving the required access to the **Contents** permission only. For more information, see "[AUTOTITLE](/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)."
 
-You can then add the token as an environment variable in a codespace, or as a secret for {% data variables.product.prodname_github_codespaces %}. If you create a secret, you should only allow certain trusted repositories to access the secret. When you add a new secret, you will be prompted to reload your existing codespace to pull in the new secret. For more information, see "[AUTOTITLE](/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces)."
+You can then add the token as an environment variable in a codespace, or as a secret for {% data variables.product.prodname_github_codespaces %}. If you create a secret, you should only allow certain trusted repositories to access the secret. When you add a new secret, you will be prompted to reload your existing codespace to pull in the new secret. For more information, see "[AUTOTITLE](/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces)."
 
 To use the token to authenticate in your codespace, you have the following options.
 
@@ -59,7 +59,7 @@ To use the token to authenticate in your codespace, you have the following optio
   ```
 
   This will store the access token for the specific repository, so you will be able to push to and pull from the repository without overriding the existing credential helper.
-  
+
   {% note %}
 
   **Note:** If you clone in this way, the token will be visible in your Git configuration. You should only use this method when working in a codespace created from a repository you trust, and you should limit the scope of the access token as much as possible.

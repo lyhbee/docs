@@ -10,7 +10,6 @@ redirect_from:
 versions:
   fpt: '*'
   ghes: '*'
-  ghae: '*'
   ghec: '*'
 type: reference
 ---
@@ -270,7 +269,7 @@ For more information, see "[AUTOTITLE](/actions/learn-github-actions/contexts#gi
 
 #### `runs.steps[*].shell`
 
-**Optional** The shell where you want to run the command. You can use any of the shells listed [here](/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell). Required if `run` is set.
+**Optional** The shell where you want to run the command. You can use any of the shells listed in "[AUTOTITLE](/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)." Required if `run` is set.
 
 #### `runs.steps[*].if`
 
@@ -366,7 +365,7 @@ runs:
         last_name: Octocat
 ```
 
-{% ifversion ghes or ghae %}
+{% ifversion ghes %}
 
 #### `runs.steps[*].continue-on-error`
 

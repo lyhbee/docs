@@ -6,7 +6,6 @@ redirect_from:
 versions:
   fpt: '*'
   ghes: '*'
-  ghae: '*'
   ghec: '*'
 shortTitle: Build & test .NET
 ---
@@ -17,9 +16,7 @@ shortTitle: Build & test .NET
 
 This guide shows you how to build, test, and publish a .NET package.
 
-{% ifversion ghae %} To build and test your .NET project on {% data variables.product.prodname_ghe_managed %}, the .NET Core SDK is required. {% data reusables.actions.self-hosted-runners-software %}
-{% else %} {% data variables.product.prodname_dotcom %}-hosted runners have a tools cache with preinstalled software, which includes the .NET Core SDK. For a full list of up-to-date software and the preinstalled versions of .NET Core SDK, see [software installed on {% data variables.product.prodname_dotcom %}-hosted runners](/actions/using-github-hosted-runners/about-github-hosted-runners).
-{% endif %}
+ {% data variables.product.prodname_dotcom %}-hosted runners have a tools cache with preinstalled software, which includes the .NET Core SDK. For a full list of up-to-date software and the preinstalled versions of .NET Core SDK, see [software installed on {% data variables.product.prodname_dotcom %}-hosted runners](/actions/using-github-hosted-runners/about-github-hosted-runners).
 
 ## Prerequisites
 
@@ -39,7 +36,7 @@ We recommend that you have a basic understanding of the .NET Core SDK. For more 
 1. The "{% ifversion actions-starter-template-ui %}Choose a workflow{% else %}Choose a workflow template{% endif %}" page shows a selection of recommended starter workflows. Search for "dotnet".
 1. On the ".NET" workflow, click {% ifversion actions-starter-template-ui %}**Configure**{% else %}**Set up this workflow**{% endif %}.
 
-{%- ifversion ghes or ghae %}
+{%- ifversion ghes %}
 
    If you don't find the ".NET" starter workflow, copy the following workflow code to a new file called `dotnet.yml` in the `.github/workflows` directory of your repository.
 
@@ -113,14 +110,14 @@ jobs:
 
 ### Using a specific .NET version
 
-You can configure your job to use a specific version of .NET, such as `3.1.3`. Alternatively, you can use semantic version syntax to get the latest minor release. This example uses the latest minor release of .NET 3.
+You can configure your job to use a specific version of .NET, such as `6.0.22`. Alternatively, you can use semantic version syntax to get the latest minor release. This example uses the latest minor release of .NET 6.
 
 ```yaml
-    - name: Setup .NET SDK
+    - name: Setup .NET 6.x
       uses: {% data reusables.actions.action-setup-dotnet %}
       with:
         # Semantic version range syntax or exact version of a dotnet version
-        dotnet-version: '6.0.x'
+        dotnet-version: '6.x'
 ```
 
 ## Installing dependencies
@@ -157,7 +154,7 @@ steps:
   with:
     path: ~/.nuget/packages
     # Look to see if there is a cache hit for the corresponding requirements file
-    key: {% raw %}${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+    key: {% raw %}${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
     restore-keys: |
       ${{ runner.os }}-nuget{% endraw %}
 - name: Install dependencies

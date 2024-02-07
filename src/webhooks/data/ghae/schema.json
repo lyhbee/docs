@@ -2084,7 +2084,7 @@
                     {
                       "type": "integer",
                       "name": "size",
-                      "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
+                      "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
                     },
                     {
                       "type": "string",
@@ -2372,6 +2372,22 @@
                         {
                           "type": "object",
                           "name": "secret_scanning_push_protection",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "status",
+                              "description": "",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "secret_scanning_validity_checks",
                           "description": "",
                           "childParamsGroups": [
                             {
@@ -4205,7 +4221,7 @@
                     {
                       "type": "integer",
                       "name": "size",
-                      "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
+                      "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
                     },
                     {
                       "type": "string",
@@ -4493,6 +4509,22 @@
                         {
                           "type": "object",
                           "name": "secret_scanning_push_protection",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "status",
+                              "description": "",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "secret_scanning_validity_checks",
                           "description": "",
                           "childParamsGroups": [
                             {
@@ -6327,7 +6359,7 @@
                     {
                       "type": "integer",
                       "name": "size",
-                      "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
+                      "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
                     },
                     {
                       "type": "string",
@@ -6615,6 +6647,22 @@
                         {
                           "type": "object",
                           "name": "secret_scanning_push_protection",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "status",
+                              "description": "",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "secret_scanning_validity_checks",
                           "description": "",
                           "childParamsGroups": [
                             {
@@ -8461,7 +8509,7 @@
                     {
                       "type": "integer",
                       "name": "size",
-                      "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
+                      "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>"
                     },
                     {
                       "type": "string",
@@ -8749,6 +8797,22 @@
                         {
                           "type": "object",
                           "name": "secret_scanning_push_protection",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "status",
+                              "description": "",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "secret_scanning_validity_checks",
                           "description": "",
                           "childParamsGroups": [
                             {
@@ -9467,7 +9531,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>merge_group</code>, <code>pull_request_review_thread</code>, <code>workflow_job</code>, <code>merge_queue_entry</code>, <code>security_and_analysis</code>, <code>projects_v2_item</code>, <code>secret_scanning_alert_location</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -9971,7 +10035,7 @@
             {
               "type": "string or null",
               "name": "conclusion",
-              "description": "<p>The summary conclusion for all check runs that are part of the check suite. Can be one of <code>success</code>, <code>failure</code>, <code>neutral</code>, <code>cancelled</code>, <code>timed_out</code>, <code>action_required</code> or <code>stale</code>. This value will be <code>null</code> until the check run has <code>completed</code>.</p>",
+              "description": "<p>The summary conclusion for all check runs that are part of the check suite. This value will be <code>null</code> until the check run has <code>completed</code>.</p>",
               "isRequired": true,
               "enum": [
                 "success",
@@ -10365,7 +10429,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>pull_request_review_thread</code>, <code>workflow_job</code>, <code>merge_queue_entry</code>, <code>security_and_analysis</code>, <code>secret_scanning_alert_location</code>, <code>projects_v2_item</code>, <code>merge_group</code>, <code>repository_import</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -10869,7 +10933,7 @@
             {
               "type": "string or null",
               "name": "conclusion",
-              "description": "<p>The summary conclusion for all check runs that are part of the check suite. Can be one of <code>success</code>, <code>failure</code>,<code> neutral</code>, <code>cancelled</code>, <code>timed_out</code>, <code>action_required</code> or <code>stale</code>. This value will be <code>null</code> until the check run has completed.</p>",
+              "description": "<p>The summary conclusion for all check runs that are part of the check suite. This value will be <code>null</code> until the check run has completed.</p>",
               "isRequired": true,
               "enum": [
                 "success",
@@ -11261,7 +11325,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>pull_request_review_thread</code>, <code>merge_queue_entry</code>, <code>workflow_job</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -11765,7 +11829,7 @@
             {
               "type": "string or null",
               "name": "conclusion",
-              "description": "<p>The summary conclusion for all check runs that are part of the check suite. Can be one of <code>success</code>, <code>failure</code>,<code> neutral</code>, <code>cancelled</code>, <code>timed_out</code>, <code>action_required</code> or <code>stale</code>. This value will be <code>null</code> until the check run has completed.</p>",
+              "description": "<p>The summary conclusion for all check runs that are part of the check suite. This value will be <code>null</code> until the check run has completed.</p>",
               "isRequired": true,
               "enum": [
                 "success",
@@ -12266,7 +12330,7 @@
             {
               "type": "string or null",
               "name": "dismissed_reason",
-              "description": "<p>The reason for dismissing or closing the alert. Can be one of: <code>false positive</code>, <code>won't fix</code>, and <code>used in tests</code>.</p>",
+              "description": "<p>The reason for dismissing or closing the alert.</p>",
               "isRequired": true,
               "enum": [
                 "false positive",
@@ -12671,7 +12735,7 @@
             {
               "type": "string or null",
               "name": "dismissed_reason",
-              "description": "<p>The reason for dismissing or closing the alert. Can be one of: <code>false positive</code>, <code>won't fix</code>, and <code>used in tests</code>.</p>",
+              "description": "<p>The reason for dismissing or closing the alert.</p>",
               "isRequired": true,
               "enum": [
                 "false positive",
@@ -13439,7 +13503,7 @@
             {
               "type": "string or null",
               "name": "dismissed_reason",
-              "description": "<p>The reason for dismissing or closing the alert. Can be one of: <code>false positive</code>, <code>won't fix</code>, and <code>used in tests</code>.</p>",
+              "description": "<p>The reason for dismissing or closing the alert.</p>",
               "isRequired": true,
               "enum": [
                 "false positive",
@@ -14831,7 +14895,7 @@
   },
   "dependabot_alert": {
     "auto_dismissed": {
-      "descriptionHtml": "<p>A Dependabot alert was automatically closed.</p>",
+      "descriptionHtml": "<p>A Dependabot alert was automatically closed by a Dependabot auto-triage rule.</p>",
       "summaryHtml": "<p>This event occurs when there is activity relating to Dependabot alerts.</p>\n<p>For more information about Dependabot alerts, see \"<a href=\"https://docs.github.com/github-ae@latest/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\" For information about the API to manage Dependabot alerts, see \"<a href=\"https://docs.github.com/github-ae@latest/rest/dependabot/alerts\">Dependabot alerts</a>\" in the REST API documentation.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Dependabot alerts\" repository permission.</p>\n<p><strong>Note</strong>: Webhook events for Dependabot alerts are currently in beta and subject to change.</p>",
       "bodyParameters": [
         {
@@ -15413,7 +15477,7 @@
       "category": "dependabot_alert"
     },
     "auto_reopened": {
-      "descriptionHtml": "<p>A Dependabot alert was automatically reopened.</p>",
+      "descriptionHtml": "<p>A Dependabot alert, that had been automatically closed by a Dependabot auto-triage rule, was automatically reopened because the alert metadata or rule changed.</p>",
       "summaryHtml": "<p>This event occurs when there is activity relating to Dependabot alerts.</p>\n<p>For more information about Dependabot alerts, see \"<a href=\"https://docs.github.com/github-ae@latest/code-security/dependabot/dependabot-alerts/about-dependabot-alerts\">About Dependabot alerts</a>.\" For information about the API to manage Dependabot alerts, see \"<a href=\"https://docs.github.com/github-ae@latest/rest/dependabot/alerts\">Dependabot alerts</a>\" in the REST API documentation.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Dependabot alerts\" repository permission.</p>\n<p><strong>Note</strong>: Webhook events for Dependabot alerts are currently in beta and subject to change.</p>",
       "bodyParameters": [
         {
@@ -19356,7 +19420,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>workflow_job</code>, <code>pull_request_review_thread</code>, <code>merge_queue_entry</code>, <code>secret_scanning_alert_location</code>, <code>merge_group</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -29919,7 +29983,7 @@
             {
               "type": "string or null",
               "name": "conclusion",
-              "description": "<p>The result of the completed check run. Can be one of <code>success</code>, <code>failure</code>, <code>neutral</code>, <code>cancelled</code>, <code>timed_out</code>, <code>action_required</code> or <code>stale</code>. This value will be <code>null</code> until the check run has completed.</p>",
+              "description": "<p>The result of the completed check run. This value will be <code>null</code> until the check run has completed.</p>",
               "isRequired": true,
               "enum": [
                 "success",
@@ -30191,7 +30255,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>merge_queue_entry</code>, <code>workflow_job</code>, <code>pull_request_review_thread</code>, <code>secret_scanning_alert_location</code>, <code>merge_group</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -30925,7 +30989,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>pull_request_review_thread</code>, <code>merge_queue_entry</code>, <code>workflow_job</code>, <code>merge_group</code>, <code>secret_scanning_alert_location</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -39029,7 +39093,7 @@
                 {
                   "type": "integer",
                   "name": "size",
-                  "description": "<p>The size of the repository. Size is calculated hourly. When a repository is initially created, the size is 0.</p>",
+                  "description": "<p>The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.</p>",
                   "isRequired": true
                 },
                 {
@@ -45626,6 +45690,11 @@
               "isRequired": true
             },
             {
+              "type": "object",
+              "name": "custom_properties",
+              "description": "<p>The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.</p>"
+            },
+            {
               "type": "string",
               "name": "default_branch",
               "description": "<p>The default branch of the repository.</p>",
@@ -46284,34 +46353,6 @@
           "enum": [
             "revoked"
           ],
-          "childParamsGroups": []
-        },
-        {
-          "type": "object",
-          "name": "enterprise",
-          "in": "body",
-          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/github-ae@latest/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
-          "childParamsGroups": []
-        },
-        {
-          "type": "object",
-          "name": "installation",
-          "in": "body",
-          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/github-ae@latest/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
-          "childParamsGroups": []
-        },
-        {
-          "type": "object",
-          "name": "organization",
-          "in": "body",
-          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
-          "childParamsGroups": []
-        },
-        {
-          "type": "object",
-          "name": "repository",
-          "in": "body",
-          "description": "<p>The repository on GitHub where the event occurred. Webhook payloads contain the <code>repository</code> property\nwhen the event occurs from activity in a repository.</p>",
           "childParamsGroups": []
         },
         {
@@ -52687,7 +52728,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>reminder</code>, <code>pull_request_review_thread</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -54714,7 +54755,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>reminder</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -56994,7 +57035,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>security_and_analysis</code>, <code>pull_request_review_thread</code>, <code>reminder</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -58389,7 +58430,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>pull_request_review_thread</code>, <code>reminder</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -61356,7 +61397,7 @@
                     {
                       "type": "array of strings",
                       "name": "events",
-                      "description": "<p>The list of events for the GitHub app</p>"
+                      "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                     },
                     {
                       "type": "string or null",
@@ -62324,6 +62365,11 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_discussions",
+                  "description": "<p>Whether the repository has discussions enabled.</p>"
+                },
+                {
+                  "type": "boolean",
                   "name": "has_downloads",
                   "description": "<p>Whether downloads are enabled.</p>",
                   "isRequired": true,
@@ -62823,6 +62869,11 @@
                   "name": "watchers_count",
                   "description": "",
                   "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "web_commit_signoff_required",
+                  "description": "<p>Whether to require commit signoff.</p>"
                 }
               ]
             }
@@ -63371,7 +63422,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>security_and_analysis</code>, <code>pull_request_review_thread</code>, <code>reminder</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -64713,7 +64764,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -66730,7 +66781,7 @@
                     {
                       "type": "array of strings",
                       "name": "events",
-                      "description": "<p>The list of events for the GitHub app</p>"
+                      "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                     },
                     {
                       "type": "string or null",
@@ -68756,7 +68807,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -70220,7 +70271,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>reminder</code>, <code>pull_request_review_thread</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -71565,7 +71616,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code>, <code>reminder</code>, <code>pull_request_review_thread</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -73639,7 +73690,7 @@
                 {
                   "type": "array of strings",
                   "name": "events",
-                  "description": "<p>The list of events for the GitHub app</p>"
+                  "description": "<p>The list of events for the GitHub app\nSupported values are: <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>content_reference</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_review</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_dispatch</code>, <code>secret_scanning_alert</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_dispatch</code>, <code>workflow_run</code></p>"
                 },
                 {
                   "type": "string or null",
@@ -76237,7 +76288,7 @@
             {
               "type": "array of strings",
               "name": "events",
-              "description": "",
+              "description": "<p>undefinedSupported values are: <code>*</code>, <code>branch_protection_rule</code>, <code>check_run</code>, <code>check_suite</code>, <code>code_scanning_alert</code>, <code>commit_comment</code>, <code>create</code>, <code>delete</code>, <code>deployment</code>, <code>deployment_status</code>, <code>deploy_key</code>, <code>discussion</code>, <code>discussion_comment</code>, <code>fork</code>, <code>gollum</code>, <code>issues</code>, <code>issue_comment</code>, <code>label</code>, <code>member</code>, <code>membership</code>, <code>meta</code>, <code>milestone</code>, <code>organization</code>, <code>org_block</code>, <code>package</code>, <code>page_build</code>, <code>project</code>, <code>project_card</code>, <code>project_column</code>, <code>public</code>, <code>pull_request</code>, <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>pull_request_review_thread</code>, <code>push</code>, <code>registry_package</code>, <code>release</code>, <code>repository</code>, <code>repository_import</code>, <code>repository_vulnerability_alert</code>, <code>secret_scanning_alert</code>, <code>secret_scanning_alert_location</code>, <code>security_and_analysis</code>, <code>star</code>, <code>status</code>, <code>team</code>, <code>team_add</code>, <code>watch</code>, <code>workflow_job</code>, <code>workflow_run</code>, <code>repository_dispatch</code>, <code>projects_v2_item</code></p>",
               "isRequired": true
             },
             {
@@ -81422,8 +81473,8 @@
   },
   "project_card": {
     "converted": {
-      "descriptionHtml": "<p>A note in a classic project was converted to an issue.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A note in a project (classic) was converted to an issue.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -81704,8 +81755,8 @@
       "category": "project_card"
     },
     "created": {
-      "descriptionHtml": "<p>A card was added to a classic project.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A card was added to a project (classic).</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -81963,8 +82014,8 @@
       "category": "project_card"
     },
     "deleted": {
-      "descriptionHtml": "<p>A card on a classic project was deleted.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A card on a project (classic) was deleted.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -82223,8 +82274,8 @@
       "category": "project_card"
     },
     "edited": {
-      "descriptionHtml": "<p>A note on a classic project was edited.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A note on a project (classic) was edited.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -82505,8 +82556,8 @@
       "category": "project_card"
     },
     "moved": {
-      "descriptionHtml": "<p>A card on a classic project was moved to another column or to another position in its column.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a column on a project, use the <code>project</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A card on a project (classic) was moved to another column or to another position in its column.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a card on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a column on a project (classic), use the <code>project</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -82790,8 +82841,8 @@
   },
   "project": {
     "closed": {
-      "descriptionHtml": "<p>A classic project was closed.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A project (classic) was closed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -83055,8 +83106,8 @@
       "category": "project"
     },
     "created": {
-      "descriptionHtml": "<p>A classic project was created.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A project (classic) was created.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -83320,8 +83371,8 @@
       "category": "project"
     },
     "deleted": {
-      "descriptionHtml": "<p>A classic project was deleted.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A project (classic) was deleted.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -83584,8 +83635,8 @@
       "category": "project"
     },
     "edited": {
-      "descriptionHtml": "<p>The name or description of a classic project was changed.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>The name or description of a project (classic) was changed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -83882,8 +83933,8 @@
       "category": "project"
     },
     "reopened": {
-      "descriptionHtml": "<p>A classic project was closed.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project, use the <code>project_card</code> and <code>project_column</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A project (classic) was closed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a card or column on a project (classic), use the <code>project_card</code> and <code>project_column</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -84149,8 +84200,8 @@
   },
   "project_column": {
     "created": {
-      "descriptionHtml": "<p>A column was added to a classic project.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a card on a project, use the <code>project</code> and <code>project_card</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A column was added to a project (classic).</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a card on a project (classic), use the <code>project</code> and <code>project_card</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -84270,8 +84321,8 @@
       "category": "project_column"
     },
     "deleted": {
-      "descriptionHtml": "<p>A column was deleted from a classic project.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a card on a project, use the <code>project</code> and <code>project_card</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A column was deleted from a project (classic).</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a card on a project (classic), use the <code>project</code> and <code>project_card</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -84391,8 +84442,8 @@
       "category": "project_column"
     },
     "edited": {
-      "descriptionHtml": "<p>The name of a column on a classic project was changed.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a card on a project, use the <code>project</code> and <code>project_card</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>The name of a column on a project (classic) was changed.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a card on a project (classic), use the <code>project</code> and <code>project_card</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -84534,8 +84585,8 @@
       "category": "project_column"
     },
     "moved": {
-      "descriptionHtml": "<p>A column was moved to a new position on a classic project.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a classic project. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project or a card on a project, use the <code>project</code> and <code>project_card</code> event. For activity relating to Projects instead of Projects (classic), use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
+      "descriptionHtml": "<p>A column was moved to a new position on a project (classic).</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a column on a project (classic). For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards\">About projects (classic)</a>.\" For information about the API to manage classic projects, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#project\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/projects\">Projects (classic)</a>\" in the REST API documentation.</p>\n<p>For activity relating to a project (classic) or a card on a project (classic), use the <code>project</code> and <code>project_card</code> event.</p>\n<p>This event relates to projects (classic) only. For activity relating to the new Projects experience, use the <code>projects_v2</code> event instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Projects\" repository or organization permission.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -107190,7 +107241,7 @@
       "category": "pull_request"
     },
     "edited": {
-      "descriptionHtml": "<p>The title or body of a pull request was edited.</p>",
+      "descriptionHtml": "<p>The title or body of a pull request was edited, or the base branch of a pull request was changed.</p>",
       "summaryHtml": "<p>This event occurs when there is activity on a pull request. For more information, see \"<a href=\"https://docs.github.com/github-ae@latest/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests\">About pull requests</a>.\" For information about the APIs to manage pull requests, see <a href=\"https://docs.github.com/github-ae@latest/graphql/reference/objects#pullrequest\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/github-ae@latest/rest/pulls/pulls\">Pulls</a>\" in the REST API documentation.</p>\n<p>For activity related to pull request reviews, pull request review comments, pull request comments, or pull request review threads, use the <code>pull_request_review</code>, <code>pull_request_review_comment</code>, <code>issue_comment</code>, or <code>pull_request_review_thread</code> events instead.</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Pull requests\" repository permission.</p>",
       "bodyParameters": [
         {
@@ -184702,6 +184753,16 @@
               "type": "string",
               "name": "secret_type",
               "description": "<p>The type of secret that secret scanning detected.</p>"
+            },
+            {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
             }
           ]
         },
@@ -184960,6 +185021,16 @@
               "type": "string",
               "name": "secret_type",
               "description": "<p>The type of secret that secret scanning detected.</p>"
+            },
+            {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
             }
           ]
         },
@@ -185218,6 +185289,16 @@
               "type": "string",
               "name": "secret_type",
               "description": "<p>The type of secret that secret scanning detected.</p>"
+            },
+            {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
             }
           ]
         },
@@ -185476,6 +185557,16 @@
               "type": "string",
               "name": "secret_type",
               "description": "<p>The type of secret that secret scanning detected.</p>"
+            },
+            {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
             }
           ]
         },
@@ -185735,6 +185826,16 @@
               "type": "string",
               "name": "secret_type",
               "description": "<p>The type of secret that secret scanning detected.</p>"
+            },
+            {
+              "type": "string",
+              "name": "validity",
+              "description": "<p>The token status as of the latest validity check.</p>",
+              "enum": [
+                "active",
+                "inactive",
+                "unknown"
+              ]
             }
           ]
         },
@@ -185755,13 +185856,21 @@
             {
               "type": "string",
               "name": "type",
-              "description": "<p>The location type. Because secrets may be found in different types of resources (ie. code, comments, issues), this field identifies the type of resource where the secret was found.</p>",
+              "description": "<p>The location type. Because secrets may be found in different types of resources (ie. code, comments, issues, pull requests, discussions), this field identifies the type of resource where the secret was found.</p>",
               "isRequired": true,
               "enum": [
                 "commit",
                 "issue_title",
                 "issue_body",
-                "issue_comment"
+                "issue_comment",
+                "discussion_title",
+                "discussion_body",
+                "discussion_comment",
+                "pull_request_title",
+                "pull_request_body",
+                "pull_request_comment",
+                "pull_request_review",
+                "pull_request_review_comment"
               ]
             },
             {
@@ -185878,6 +185987,22 @@
                     {
                       "type": "object",
                       "name": "secret_scanning_push_protection",
+                      "description": "",
+                      "childParamsGroups": [
+                        {
+                          "type": "string",
+                          "name": "status",
+                          "description": "",
+                          "enum": [
+                            "enabled",
+                            "disabled"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "secret_scanning_validity_checks",
                       "description": "",
                       "childParamsGroups": [
                         {

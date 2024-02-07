@@ -13,7 +13,7 @@ There are positives and negatives to adding a screenshot. Screenshots make artic
 
 On the other hand, screenshots privilege sighted users, add length and load time to articles, and increase the volume of content that needs to be maintained. When captured at different pixel dimensions and degrees of zoom than the reader is using, screenshots can be confusing.
 
-Therefore, we only add screenshots to {% data variables.product.prodname_docs %} when they they meet our criteria for inclusion.
+Therefore, we only add screenshots to {% data variables.product.prodname_docs %} when they meet our criteria for inclusion.
 
 ## Criteria for including a screenshot
 
@@ -101,7 +101,7 @@ To meet the needs of more users, screenshots must:
 
 - Be accompanied by complete instructions in the procedural step, with no information conveyed entirely in visual form.
 - Be full contrast, as in the interface itself, with nothing obscured or reduced in opacity or color contrast.
-- Have alt text that describes the content of the image and the appearance of its highlighting, if any. For more information, see "[AUTOTITLE](/contributing/writing-for-github-docs/style-guide#alt-text)."
+- Have alt text that describes the content of the image and the appearance of its highlighting, if any. For more information, see "[AUTOTITLE](/contributing/style-guide-and-content-model/style-guide#alt-text)."
 - Be clear and crisp, with text and UI elements as legible as possible.
 
 ### Visual style

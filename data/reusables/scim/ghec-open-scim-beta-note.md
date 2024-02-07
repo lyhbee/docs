@@ -2,13 +2,12 @@
 
 {% note %}
 
-**Note:** The SCIM API endpoints for {% data variables.enterprise.prodname_emu_enterprise %} on {% data variables.product.product_name %} are currently accessible solely through published IdP applications. Public access to the SCIM API endpoints is currently in private beta and subject to change. To access the beta, you can contact your account manager on {% data variables.contact.contact_enterprise_sales %} or [sign up](https://github.com/features/emu-public-scim-api/signup).
+**Notes**:
+
+- Support for provisioning users with {% data variables.product.company_short %}'s public SCIM schema is in private beta and subject to change. To request access to the beta, contact your account manager on {% data variables.contact.contact_enterprise_sales %}.
+- This operation allows you to provision user accounts for your enterprise on {% data variables.product.prodname_ghe_cloud %} using SCIM. The operation is only available for use with {% data variables.product.prodname_emus %}. If you don't use {% data variables.product.prodname_emus %} and want to provision access to your organizations using SCIM, see "[AUTOTITLE](/rest/scim/scim)."
+- {% data variables.product.company_short %} recommends that you test provisioning in an environment that's isolated from the production data on your IdP and {% data variables.location.product_location %}.
 
 {% endnote %}
-
-{% warning %}
-
-**Warning:** The beta is exclusively for testing and feedback, and no support is available. {% data variables.product.company_short %} recommends testing with a non production instance.
-{% endwarning %}
 
 {% endif %}

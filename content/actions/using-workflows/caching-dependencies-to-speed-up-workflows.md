@@ -282,12 +282,18 @@ To manage caches created from your workflows, you can:
 There are multiple ways to manage caches for your repositories:
 
 - Using the {% data variables.product.prodname_dotcom %} web interface, as shown below.
-- Using the REST API. For more information, see the "[AUTOTITLE](/rest/actions/cache)" REST API documentation.
-- Installing a {% data variables.product.prodname_cli %} extension to manage your caches from the command line. For more information, see the [gh-actions-cache](https://github.com/actions/gh-actions-cache) extension.
+- Using the REST API. For more information, see "[AUTOTITLE](/rest/actions/cache)."
+- Installing the `gh cache` subcommand to manage your caches from the command line. For more information, see the [GitHub CLI documentation](https://cli.github.com/manual/gh_cache).
+
+    {% note %}
+
+    **Note:** If you are doing this manually, ensure you have version 2.32.0 or higher of the CLI installed.
+
+    {% endnote %}
 
 {% else %}
 
-You can use the {% data variables.product.product_name %} REST API to manage your caches. {% ifversion actions-cache-list-delete-apis %}You can use the API to list and delete cache entries, and see your cache usage.{% elsif actions-cache-management %}At present, you can use the API to see your cache usage, with more functionality expected in future updates.{% endif %} For more information, see the "[AUTOTITLE](/rest/actions/cache)" REST API documentation.
+You can use the {% data variables.product.product_name %} REST API to manage your caches. {% ifversion actions-cache-list-delete-apis %}You can use the API to list and delete cache entries, and see your cache usage.{% elsif actions-cache-management %}At present, you can use the API to see your cache usage, with more functionality expected in future updates.{% endif %} For more information, see "[AUTOTITLE](/rest/actions/cache)."
 
 You can also install a {% data variables.product.prodname_cli %} extension to manage your caches from the command line. For more information about the extension, see [the extension documentation](https://github.com/actions/gh-actions-cache#readme). For more information about {% data variables.product.prodname_cli %} extensions, see "[AUTOTITLE](/github-cli/github-cli/using-github-cli-extensions)."
 
@@ -345,20 +351,14 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: {% data reusables.actions.action-checkout %}
-        
       - name: Cleanup
         run: |
           gh extension install actions/gh-actions-cache
-          
-          REPO={% raw %}${{ github.repository }}{% endraw %}
-          BRANCH="refs/pull/{% raw %}${{ github.event.pull_request.number }}{% endraw %}/merge"
 
           echo "Fetching list of cache key"
           cacheKeysForPR=$(gh actions-cache list -R $REPO -B $BRANCH -L 100 | cut -f 1 )
 
-          ## Setting this to not fail the workflow while deleting cache keys. 
+          ## Setting this to not fail the workflow while deleting cache keys.
           set +e
           echo "Deleting caches..."
           for cacheKey in $cacheKeysForPR
@@ -368,6 +368,8 @@ jobs:
           echo "Done"
         env:
           GH_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+          REPO: {% raw %}${{ github.repository }}{% endraw %}
+          BRANCH: refs/pull/{% raw %}${{ github.event.pull_request.number }}{% endraw %}/merge
 ```
 
 Alternatively, you can use the API to automatically list or delete all caches on your own cadence. For more information, see "[AUTOTITLE](/rest/actions/cache#about-the-cache-in-github-actions)."

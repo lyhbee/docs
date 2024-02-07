@@ -8,7 +8,7 @@
  * They both need to a whitespace-separated list of paths to content files.
  * For example:
  *
- *    export CHANGED_FILES="content/get-started/index.md content/get-started/quickstart/hello-world.md"
+ *    export CHANGED_FILES="content/get-started/index.md content/get-started/start-your-journey/hello-world.md"
  *
  * If any of the paths in there, split by ' ', don't match real files, the
  * test will fail before it even starts. Meaning, it will throw an error
@@ -33,8 +33,8 @@ import path from 'path'
 
 import { jest } from '@jest/globals'
 
-import { head, get } from '../../../tests/helpers/e2etest.js'
-import { loadPages } from '../../../lib/page-data.js'
+import { head, get } from '#src/tests/helpers/e2etest.js'
+import { loadPages } from '#src/frame/lib/page-data.js'
 
 const EMPTY = Symbol('EMPTY')
 

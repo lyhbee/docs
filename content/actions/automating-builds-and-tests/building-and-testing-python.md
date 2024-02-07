@@ -8,7 +8,6 @@ redirect_from:
 versions:
   fpt: '*'
   ghes: '*'
-  ghae: '*'
   ghec: '*'
 type: tutorial
 topics:
@@ -23,18 +22,15 @@ shortTitle: Build & test Python
 
 This guide shows you how to build, test, and publish a Python package.
 
-{% ifversion ghae %}
-{% data reusables.actions.self-hosted-runners-software %}
-{% else %} {% data variables.product.prodname_dotcom %}-hosted runners have a tools cache with pre-installed software, which includes Python and PyPy. You don't have to install anything! For a full list of up-to-date software and the pre-installed versions of Python and PyPy, see "[AUTOTITLE](/actions/using-github-hosted-runners/about-github-hosted-runners#supported-software)".
-{% endif %}
+{% data variables.product.prodname_dotcom %}-hosted runners have a tools cache with pre-installed software, which includes Python and PyPy. You don't have to install anything! For a full list of up-to-date software and the pre-installed versions of Python and PyPy, see "[AUTOTITLE](/actions/using-github-hosted-runners/about-github-hosted-runners#supported-software)".
 
 ## Prerequisites
 
 You should be familiar with YAML and the syntax for {% data variables.product.prodname_actions %}. For more information, see "[AUTOTITLE](/actions/learn-github-actions)."
 
-We recommend that you have a basic understanding of Python, PyPy, and pip. For more information, see:
+We recommend that you have a basic understanding of Python, and pip. For more information, see:
+
 - [Getting started with Python](https://www.python.org/about/gettingstarted/)
-- [PyPy](https://pypy.org/)
 - [Pip package manager](https://pypi.org/project/pip/)
 
 {% data reusables.actions.enterprise-setup-prereq %}
@@ -43,7 +39,7 @@ We recommend that you have a basic understanding of Python, PyPy, and pip. For m
 
 {% data reusables.actions.starter-workflow-get-started %}
 
-{% data variables.product.prodname_dotcom %} provides a starter workflow for Python that should work for most Python projects. The subsequent sections of this guide give examples of how you can customize this starter workflow.
+{% data variables.product.prodname_dotcom %} provides a starter workflow for Python that should work if your repository already contains at least one `.py` file. The subsequent sections of this guide give examples of how you can customize this starter workflow.
 
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.repositories.actions-tab %}
@@ -51,7 +47,7 @@ We recommend that you have a basic understanding of Python, PyPy, and pip. For m
 1. The "{% ifversion actions-starter-template-ui %}Choose a workflow{% else %}Choose a workflow template{% endif %}" page shows a selection of recommended starter workflows. Search for "Python application".
 1. On the "Python application" workflow, click {% ifversion actions-starter-template-ui %}**Configure**{% else %}**Set up this workflow**{% endif %}.
 
-{%- ifversion ghes or ghae %}
+{%- ifversion ghes %}
 
    If you don't find the "Python application" starter workflow, copy the following workflow code to a new file called `python-app.yml` in the `.github/workflows` directory of your repository.
 
@@ -126,6 +122,8 @@ If you are using a self-hosted runner, you can configure the runner to use the `
 
 ### Using multiple Python versions
 
+The following example uses a matrix for the job to set up multiple Python versions. For more information, see "[AUTOTITLE](/actions/using-jobs/using-a-matrix-for-your-jobs)."
+
 ```yaml copy
 name: Python package
 
@@ -136,10 +134,8 @@ jobs:
 
     runs-on: ubuntu-latest
     strategy:
-      # You can use PyPy versions in python-version.
-      # For example, pypy2.7 and pypy3.9
       matrix:
-        python-version: ["2.7", "3.7", "3.8", "3.9", "3.10", "3.11"]
+        python-version: ["pypy3.9", "pypy3.10", "3.9", "3.10", "3.11", "3.12"]
 
     steps:
       - uses: {% data reusables.actions.action-checkout %}
@@ -168,7 +164,8 @@ jobs:
 
     steps:
       - uses: {% data reusables.actions.action-checkout %}
-      - name: Set up Python 3.x
+      - name: Set up Python
+        # This is the version of the action for setting up Python, not the Python version.
         uses: {% data reusables.actions.action-setup-python %}
         with:
           # Semantic version range syntax or exact version of a Python version
@@ -198,12 +195,12 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11", pypy2.7, pypy3.9]
+        python-version: ["3.9", "3.10", "3.11", "pypy3.9", "pypy3.10"]
         exclude:
           - os: macos-latest
-            python-version: "3.7"
+            python-version: "3.9"
           - os: windows-latest
-            python-version: "3.7"
+            python-version: "3.9"
 ```
 
 ### Using the default Python version
@@ -318,7 +315,7 @@ steps:
 - name: Lint with Ruff
   run: |
     pip install ruff
-    ruff --format=github --target-version=py37 .
+    ruff --output-format=github .
   continue-on-error: true
 ```
 
@@ -428,7 +425,7 @@ jobs:
       - name: Build package
         run: python -m build
       - name: Publish package
-        uses: pypa/gh-action-pypi-publish@release/v1
+        uses: pypa/gh-action-pypi-publish@v1
         with:
           password: {% raw %}${{ secrets.PYPI_API_TOKEN }}{% endraw %}
 ```

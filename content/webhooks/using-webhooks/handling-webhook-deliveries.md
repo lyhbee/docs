@@ -1,5 +1,6 @@
 ---
 title: Handling webhook deliveries
+shortTitle: Handle deliveries
 intro: 'Learn how to write code to listen for and respond to webhook deliveries.'
 redirect_from:
   - /webhooks/configuring
@@ -198,12 +199,12 @@ To use this example, you must install the `express` library in your Node.js proj
 npm install express
 ```
 
-#### Javascript example: Write the code
+#### JavaScript example: Write the code
 
 Create a JavaScript file with the following contents. Modify the code to handle the event types that your webhook is subscribed to, as well as the `ping` event that {% data variables.product.company_short %} sends when you create a webhook. This example handles the `issues` and `ping` events.
 
 ```javascript copy annotate
-// You installed the `express` library earlier. For more information, see "[JavaScript example: Install dependencies](#javascript-example-install-dependencies)." 
+// You installed the `express` library earlier. For more information, see "[JavaScript example: Install dependencies](#javascript-example-install-dependencies)."
 const express = require('express');
 
 // This initializes a new Express application.

@@ -65,11 +65,11 @@ Currently, we don't support passkeys or security keys as primary 2FA methods sin
 
 ### About TOTP apps and mandatory 2FA
 
-TOTP apps are the recommended 2FA factor for {% data variables.product.prodname_dotcom %}. For more information on configuring TOTP apps, see "[AUTOTITLE](/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-totp-mobile-app)."
+TOTP apps are the recommended 2FA factor for {% data variables.product.prodname_dotcom %}. For more information on configuring TOTP apps, see "[AUTOTITLE](/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-totp-app)."
 
 If you do not want to download an app on your mobile device, there are multiple options for standalone TOTP apps that run across platforms. For desktop applications, we recommend [KeePassXC](https://keepassxc.org/), and for browser-based plugins, we recommend [1Password](https://support.1password.com/one-time-passwords/#to-save-your-qr-code-using-the-1password-browser-extension).
 
-You can also manually set up any app that generates a code compatible with RFC 6238. For more information on manually setting up a TOTP app, see "[AUTOTITLE](/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-totp-mobile-app)." For more information on RFC 6238, see [TOTP: Time-Based One-Time Password Algorithm](https://datatracker.ietf.org/doc/html/rfc6238) in the IETF documentation.
+You can also manually set up any app that generates a code compatible with RFC 6238. For more information on manually setting up a TOTP app, see "[AUTOTITLE](/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-totp-app)." For more information on RFC 6238, see [TOTP: Time-Based One-Time Password Algorithm](https://datatracker.ietf.org/doc/html/rfc6238) in the IETF documentation.
 
 {% note %}
 
@@ -87,9 +87,13 @@ If you have been selected for mandatory 2FA, you must enroll in 2FA on {% data v
 
 When you log in to {% data variables.product.prodname_dotcom_the_website %}, email verification does not count as 2FA. Your account's email address is used for password resets, which are a form of account recovery. If an attacker has access to your email inbox, they can reset the password for your account and pass the email device verification check, reducing your account's protection to a single factor. We require a second factor to prevent this scenario, so that second factor must be distinct from your email inbox. When you enable 2FA, we will no longer perform email verification on login.
 
+### About service accounts and mandatory 2FA
+
+Unattended or shared access accounts in your organization, such as bots and service accounts, that are selected for mandatory two-factor authentication, must enroll in 2FA. Enabling 2FA will not revoke or change the behavior of tokens issued for the service account. {% data variables.product.prodname_dotcom %} recommends securely storing the TOTP secret of the service account in shared credential storage. For more information, see "[AUTOTITLE](/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/managing-bots-and-service-accounts-with-two-factor-authentication)."
+
 ## About your privacy with mandatory 2FA
 
-If you have been selected for mandatory 2FA, that **does not** mean you have to provide {% data variables.product.prodname_dotcom %} with your phone number. You only have to provide your phone number if you use SMS for 2FA. Instead, we recommend configuring a TOTP app as your primary 2FA method. For more information, see "[AUTOTITLE](/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-totp-mobile-app)."
+If you have been selected for mandatory 2FA, that **does not** mean you have to provide {% data variables.product.prodname_dotcom %} with your phone number. You only have to provide your phone number if you use SMS for 2FA. Instead, we recommend configuring a TOTP app as your primary 2FA method. For more information, see "[AUTOTITLE](/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-totp-app)."
 
 {% note %}
 

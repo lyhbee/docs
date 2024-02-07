@@ -9,6 +9,8 @@ redirect_from:
   - /actions/using-github-hosted-runners/managing-larger-runners
 ---
 
+{% data reusables.actions.windows-linux-larger-runners-note %}
+
 {% ifversion ghec %}
 
 ## Adding a {% data variables.actions.hosted_runner %} to an enterprise
@@ -62,6 +64,8 @@ For more information, see "[AUTOTITLE](/actions/using-github-hosted-runners/cont
 {% endwarning %}
 
 ## Changing the name of a {% data variables.actions.hosted_runner %}
+
+{% data reusables.actions.larger-runner-name-note %}
 
 {% ifversion ghec %}
 You can edit the name of your {% data variables.actions.hosted_runner %}s.

@@ -2,13 +2,13 @@ import path from 'path'
 
 import got from 'got'
 
-import patterns from '../../../lib/patterns.js'
+import patterns from '#src/frame/lib/patterns.js'
 import isArchivedVersion from '#src/archives/lib/is-archived-version.js'
 import {
   setFastlySurrogateKey,
   SURROGATE_ENUMS,
-} from '../../../middleware/set-fastly-surrogate-key.js'
-import { archivedCacheControl } from '../../../middleware/cache-control.js'
+} from '#src/frame/middleware/set-fastly-surrogate-key.js'
+import { archivedCacheControl } from '#src/frame/middleware/cache-control.js'
 
 // This module handles requests for the CSS and JS assets for
 // deprecated GitHub Enterprise versions by routing them to static content in
@@ -73,7 +73,7 @@ export default async function archivedEnterpriseVersionsAssets(req, res, next) {
 
     return res.send(r.body)
   } catch (err) {
-    // Primarly for the developers working on tests that mock
+    // Primarily for the developers working on tests that mock
     // requests. If you don't set up `nock` correctly, you might
     // not realize that and think it failed for other reasons.
     if (err.toString().includes('Nock: No match for request')) {

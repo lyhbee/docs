@@ -6,7 +6,6 @@ allowTitleToDifferFromFilename: true
 versions:
   fpt: '*'
   ghes: '*'
-  ghae: '*'
   ghec: '*'
 topics:
   - Dependabot
@@ -16,7 +15,7 @@ topics:
   - Dependencies
 children:
   - /dependabot-alerts
-  - /dependabot-alert-rules
+  - /dependabot-auto-triage-rules
   - /dependabot-security-updates
   - /dependabot-version-updates
   - /working-with-dependabot

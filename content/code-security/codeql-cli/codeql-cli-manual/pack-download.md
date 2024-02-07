@@ -2,7 +2,6 @@
 title: pack download
 versions: # DO NOT MANUALLY EDIT. CHANGES WILL BE OVERWRITTEN BY A 🤖
   fpt: '*'
-  ghae: '*'
   ghec: '*'
   ghes: '*'
 topics:
@@ -33,18 +32,20 @@ codeql pack download [--dir=<dir>] [--force] <options>... -- <scope/name[@versio
 
 ## Description
 
-\[Experimental] Download the set of qlpacks referenced by the query
-spec of the command line from the registry. Packs can be provided by
-name or implicitly inside of a query suite (.qls) file.
+Download the set of qlpacks referenced by the query spec of the command
+line from the registry. Packs can be provided by name or implicitly
+inside of a query suite (.qls) file.
 
 The packs will be downloaded and unzipped into the package cache by
 default.
 
 Available since `v2.6.0`.
 
-## Primary options
+## Options
 
-#### `<scope/name[@version]|suite.qls>...` <!-- markdownlint-disable-line heading-increment -->
+### Primary Options
+
+#### `<scope/name[@version]|suite.qls>...`
 
 \[Mandatory] List of CodeQL packs and query suites to download. If a
 query suite is provided, its instructions will be inspected and all
@@ -124,7 +125,7 @@ value.
 #### `--registries-auth-stdin`
 
 Authenticate to GitHub Enterprise Server Container registries by passing
-a comma-separated list of `<registry_url>=<token>` pairs.
+a comma-separated list of \<registry\_url>=\<token> pairs.
 
 For example, you can pass
 `https://containers.GHEHOSTNAME1/v2/=TOKEN1,https://containers.GHEHOSTNAME2/v2/=TOKEN2`
@@ -181,3 +182,13 @@ the running subcommand.
 
 (To write a log file with a name you have full control over, instead
 give `--log-to-stderr` and redirect stderr as desired.)
+
+#### `--common-caches=<dir>`
+
+\[Advanced] Controls the location of cached data on disk that will
+persist between several runs of the CLI, such as downloaded QL packs and
+compiled query plans. If not set explicitly, this defaults to a
+directory named `.codeql` in the user's home directory; it will be
+created if it doesn't already exist.
+
+Available since `v2.15.2`.

@@ -1,8 +1,7 @@
 ---
 title: database unbundle
-versions:
+versions: # DO NOT MANUALLY EDIT. CHANGES WILL BE OVERWRITTEN BY A 🤖
   fpt: '*'
-  ghae: '*'
   ghec: '*'
   ghes: '*'
 topics:
@@ -34,9 +33,11 @@ Extracts a CodeQL database archive.
 
 This command extracts a CodeQL database archive created by [codeql database bundle](/code-security/codeql-cli/codeql-cli-manual/database-bundle). It is similar to using unzip to extract the database, but performs better in certain scenarios (for instance, unzip is very slow on Windows) and supports additional options such as setting the name of the database extracted.
 
-## Primary options
+## Options
 
-#### `<archive>` <!-- markdownlint-disable-line heading-increment -->
+### Primary Options
+
+#### `<archive>`
 
 \[Mandatory] Path to the CodeQL database archive to unzip.
 
@@ -84,3 +85,13 @@ the running subcommand.
 
 (To write a log file with a name you have full control over, instead
 give `--log-to-stderr` and redirect stderr as desired.)
+
+#### `--common-caches=<dir>`
+
+\[Advanced] Controls the location of cached data on disk that will
+persist between several runs of the CLI, such as downloaded QL packs and
+compiled query plans. If not set explicitly, this defaults to a
+directory named `.codeql` in the user's home directory; it will be
+created if it doesn't already exist.
+
+Available since `v2.15.2`.

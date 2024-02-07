@@ -1,13 +1,13 @@
 import { jest } from '@jest/globals'
 
-import { getDOM } from '../../../tests/helpers/e2etest.js'
+import { getDOM } from '#src/tests/helpers/e2etest.js'
 import enterpriseServerReleases from '#src/versions/lib/enterprise-server-releases.js'
 
 describe('featuredLinks', () => {
   jest.setTimeout(60 * 1000)
 
   test('non-TOC pages do not have intro links', async () => {
-    const $ = await getDOM('/en/get-started/quickstart')
+    const $ = await getDOM('/en/get-started/start-your-journey')
     expect($('[data-testid=article-list]')).toHaveLength(0)
   })
 
@@ -15,7 +15,7 @@ describe('featuredLinks', () => {
     const $ = await getDOM('/en')
     const $featuredLinks = $('[data-testid=article-list] a')
     expect($featuredLinks).toHaveLength(6)
-    expect($featuredLinks.eq(0).attr('href')).toBe('/en/get-started/quickstart/hello-world')
+    expect($featuredLinks.eq(0).attr('href')).toBe('/en/get-started/start-your-journey/hello-world')
     expect($featuredLinks.eq(0).children('h3').text()).toMatch('Hello World')
     expect($featuredLinks.eq(0).children('p').text()).toMatch('Follow this Hello World exercise')
   })
@@ -25,7 +25,7 @@ describe('featuredLinks', () => {
     const $featuredLinks = $('[data-testid=article-list] a')
     expect($featuredLinks.length).toBeGreaterThan(0)
     expect($featuredLinks.eq(0).attr('href')).toBe(
-      `/en/enterprise-server@${enterpriseServerReleases.latest}/get-started/foo/bar`,
+      `/en/enterprise-server@${enterpriseServerReleases.latestStable}/get-started/foo/bar`,
     )
     expect($featuredLinks.eq(0).children('h3').text()).toMatch('Bar Usually Comes After Foo')
     expect($featuredLinks.eq(0).children('p').text()).toMatch(
@@ -34,7 +34,7 @@ describe('featuredLinks', () => {
   })
 
   // This is an important test because one of the popular links,
-  // in the front matter of `tests/fixtures/content/index.md`, uses
+  // in the front matter of `src/fixtures/fixtures/content/index.md`, uses
   // Liquid to conditionally include with `{% ifversion ghec %}`.
   test.each(['', '/enterprise-cloud@latest'])(
     'never more than 4 links per category in %a',

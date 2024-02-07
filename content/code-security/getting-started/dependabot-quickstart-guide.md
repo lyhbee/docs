@@ -29,7 +29,7 @@ This quickstart guide walks you through setting up and enabling {% data variable
 ## Prerequisites
 
 {% ifversion ghes %}
-Before you can use the {% data variables.product.prodname_dependabot_alerts %} feature in {% data variables.product.product_name %}, you must ensure that your enterprise administator enables {% data variables.product.prodname_dependabot %} for the instance. For more information, see "[AUTOTITLE](/admin/configuration/configuring-github-connect/enabling-dependabot-for-your-enterprise#enabling-dependabot-alerts)."
+Before you can use the {% data variables.product.prodname_dependabot_alerts %} feature in {% data variables.product.product_name %}, you must ensure that your enterprise administrator enables {% data variables.product.prodname_dependabot %} for the instance. For more information, see "[AUTOTITLE](/admin/configuration/configuring-github-connect/enabling-dependabot-for-your-enterprise#enabling-dependabot-alerts)."
 {% endif %}
 
 For the purpose of this guide, we're going to use a demo repository to illustrate how {% data variables.product.prodname_dependabot %} finds vulnerabilities in dependencies, where you can see {% data variables.product.prodname_dependabot_alerts %} on {% data variables.product.prodname_dotcom %}, and how you can explore, fix, or dismiss these alerts.
@@ -38,7 +38,7 @@ You need to start by forking the demo repository.
 
 1. Navigate to [https://github.com/dependabot/demo](https://github.com/dependabot/demo).
 1. At the top of the page, on the right, click **{% octicon "repo-forked" aria-hidden="true" %} Fork**.
-1. Select an owner (you can select your {% data variables.product.prodname_dotcom %} personal account) and type a  repository name. For more information about forking repositories, see "[AUTOTITLE](/get-started/quickstart/fork-a-repo#forking-a-repository)."
+1. Select an owner (you can select your {% data variables.product.prodname_dotcom %} personal account) and type a  repository name. For more information about forking repositories, see "[AUTOTITLE](/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository)."
 1. Click **Create fork**.
 
 ## Enabling {% data variables.product.prodname_dependabot %} for your repository
@@ -70,9 +70,9 @@ If {% data variables.product.prodname_dependabot_alerts %} are enabled for a rep
 
    ![Screenshot showing the list of Dependabot alerts for the demo repository.](/assets/images/help/repository/dependabot-alerts-list-demo-repo.png)
 
-   You can filter {% data variables.product.prodname_dependabot_alerts %} in the list, using a variety of filters or labels. For more information, see "[AUTOTITLE](/code-security/dependabot/dependabot-alerts/viewing-and-updating-dependabot-alerts#prioritizing-dependabot-alerts)."{% ifversion dependabot-alert-rules-auto-dismissal-npm-dev-dependencies %} You can also use {% data variables.product.prodname_dependabot %} alert rules to filter out false positive alerts or alerts you're not interested in. For more information, see "[AUTOTITLE](/code-security/dependabot/dependabot-alert-rules/about-dependabot-alert-rules)."{% endif %}
+   You can filter {% data variables.product.prodname_dependabot_alerts %} in the list, using a variety of filters or labels. For more information, see "[AUTOTITLE](/code-security/dependabot/dependabot-alerts/viewing-and-updating-dependabot-alerts#prioritizing-dependabot-alerts)."{% ifversion dependabot-auto-triage-rules %} You can also use {% data variables.dependabot.auto_triage_rules %}to filter out false positive alerts or alerts you're not interested in. For more information, see "[AUTOTITLE](/code-security/dependabot/dependabot-auto-triage-rules/about-dependabot-auto-triage-rules)."{% endif %}
 
-1. Click the "Command Injection in lodash" alert on the _javascript/package-lock.json_ file. The details page for the alert will show the following information (note that some information may not apply to all alerts):
+1. Click the "Command Injection in lodash" alert on the `javascript/package-lock.json` file. The details page for the alert will show the following information (note that some information may not apply to all alerts):
    - Whether {% data variables.product.prodname_dependabot %} created a pull request that will fix the vulnerability. You can review the suggested security update by clicking **Review security update**.
    - Package involved
    - Affected versions
@@ -102,7 +102,7 @@ You can fix or dismiss {% data variables.product.prodname_dependabot_alerts %} o
 
 1. Navigate to the {% data variables.product.prodname_dependabot_alerts %} tab for the repository. For more information, see the "[Viewing {% data variables.product.prodname_dependabot_alerts %} for your repository](#viewing-dependabot-alerts-for-your-repository)" section above.
 1. Click an alert.
-1. Click the "Command Injection in lodash" alert on the _javascript/package-lock.json_ file.
+1. Click the "Command Injection in lodash" alert on the `javascript/package-lock.json` file.
 1. Review the alert. You can:
    - Review the suggested security update by clicking **Review security update**. This will open the pull request generated by {% data variables.product.prodname_dependabot %} with the security fix.
 
@@ -121,7 +121,7 @@ You can fix or dismiss {% data variables.product.prodname_dependabot_alerts %} o
 
      - Select a reason for dismissing the alert. {% ifversion dependabot-alerts-dismissal-comment %}
      - Optionally, add a dismissal comment. The dismissal comment will be added to the alert timeline and can be used as justification during auditing and reporting.{% endif %}
-     - Click **Dismiss alert**. The alert won't appear aymore in the **Open** tab of the alert list, and you are able to view it in the **Closed** tab.
+     - Click **Dismiss alert**. The alert won't appear anymore in the **Open** tab of the alert list, and you are able to view it in the **Closed** tab.
 
 For more information about reviewing and updating {% data variables.product.prodname_dependabot_alerts %}, see "[AUTOTITLE](/code-security/dependabot/dependabot-alerts/viewing-and-updating-dependabot-alerts#reviewing-and-fixing-alerts)."
 

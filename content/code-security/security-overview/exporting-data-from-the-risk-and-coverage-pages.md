@@ -23,7 +23,7 @@ The CSV file you download will contain data corresponding to the filters you hav
 
 {% note %}
 
-**Note:** You can only export data for the first 20 teams in your organization. These 20 teams correspond with the first 20 teams visible in the **Teams** {% octicon "triangle-down" aria-hidden="true" %} dropdown menu on security overview.
+**Note:** In the "Teams" column of the CSV file, each repository will list a maximum of 20 teams with write access to that repository. If more than 20 teams have write access to a repository, the data will be truncated.
 
 {% endnote %}
 
@@ -36,3 +36,13 @@ The CSV file you download will contain data corresponding to the filters you hav
 1. Next to the search bar, click {% octicon "download" aria-hidden="true" %} **Export CSV**.
 
     It may take a moment for {% data variables.product.product_name %} to generate the CSV file of your data. Once the CSV file generates, the file will automatically start downloading, and a banner will appear confirming your report is ready.
+
+{% ifversion secret-scanning-non-provider-patterns %}
+
+{% note %}
+
+**Note:** The summary views ({% ifversion security-overview-dashboard %}"Overview", {% endif %}"Coverage" and "Risk") show data only for high-confidence alerts. {% data variables.product.prodname_code_scanning_caps %} alerts from third-party tools, and {% data variables.product.prodname_secret_scanning %} alerts for non-provider patterns or for ignored directories are all omitted from these views. Consequently, files exported from the summary views do not contain data for these types of alert.
+
+{% endnote %}
+
+{% endif %}

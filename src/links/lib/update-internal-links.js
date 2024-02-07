@@ -6,16 +6,16 @@ import { fromMarkdown } from 'mdast-util-from-markdown'
 import { toMarkdown } from 'mdast-util-to-markdown'
 import yaml from 'js-yaml'
 
-import frontmatter from '../../../lib/read-frontmatter.js'
+import frontmatter from '#src/frame/lib/read-frontmatter.js'
 import {
   getPathWithLanguage,
   getPathWithoutLanguage,
   getPathWithoutVersion,
   getVersionStringFromPath,
-} from '../../../lib/path-utils.js'
+} from '#src/frame/lib/path-utils.js'
 import loadRedirects from '#src/redirects/lib/precompile.js'
-import patterns from '../../../lib/patterns.js'
-import { loadUnversionedTree, loadPages, loadPageMap } from '../../../lib/page-data.js'
+import patterns from '#src/frame/lib/patterns.js'
+import { loadUnversionedTree, loadPages, loadPageMap } from '#src/frame/lib/page-data.js'
 import getRedirect, { splitPathByLanguage } from '#src/redirects/lib/get-redirect.js'
 import nonEnterpriseDefaultVersion from '#src/versions/lib/non-enterprise-default-version.js'
 import { deprecated } from '#src/versions/lib/enterprise-server-releases.js'
@@ -70,7 +70,7 @@ async function updateFile(file, context, opts) {
   // Since this function can process both `.md` and `.yml` files,
   // when treating a `.md` file, the `data` from `frontmatter(rawContent)`
   // is easy. But when dealing a file like `data/learning-tracks/foo.yml`
-  // then the the `frontmatter(rawContent).data` always becomes `{}`.
+  // then the `frontmatter(rawContent).data` always becomes `{}`.
   // And since the Yaml file might contain arrays of internal linked
   // pathnames, we have to re-read it fully.
   if (file.endsWith('.yml')) {
@@ -102,7 +102,7 @@ async function updateFile(file, context, opts) {
     file.endsWith('.yml')
   ) {
     // data/learning-tracks/**/*.yml files are different because the keys
-    // are abitrary but what they might all have in common is a key
+    // are arbitrary but what they might all have in common is a key
     // there called `guides`
     for (const key of Object.keys(data)) {
       HAS_LINKS[key] = ['guides']
@@ -133,6 +133,11 @@ async function updateFile(file, context, opts) {
               if (!equalArray(better, thing)) {
                 newData[key][group] = better
               }
+            }
+          } else if (typeof thing === 'string' && thing.startsWith('/')) {
+            const better = getNewFrontmatterLinkList([thing], context, opts, file, rawContent)
+            if (!equalArray(better, [thing])) {
+              newData[key][group] = better[0]
             }
           }
         }

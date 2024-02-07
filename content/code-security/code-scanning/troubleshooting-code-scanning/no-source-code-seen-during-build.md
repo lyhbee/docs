@@ -1,18 +1,15 @@
 ---
-title: 'Error: "No source code was seen during the build" or "The process ''/opt/hostedtoolcache/CodeQL/0.0.0-20200630/x64/codeql/codeql'' failed with exit code 32"'
+title: 'Error: "No source code was seen during the build"'
 shortTitle: 'No source code seen during build'
 intro: 'When {% data variables.product.prodname_codeql %} fails to find any source code, you need to resolve this problem to unblock {% data variables.product.prodname_code_scanning %} analysis.'
 allowTitleToDifferFromFilename: true
 versions:
   fpt: '*'
   ghes: '*'
-  ghae: '*'
   ghec: '*'
 ---
 
 <!-- CodeQL CLI depends on a short URL generated from this article's URL. If this article's URL ever changes, make sure to update the short URL https://gh.io/troubleshooting-code-scanning/no-source-code-seen-during-build. https://thehub.github.com/it/how-to/url-shortening -->
-
-{% data reusables.code-scanning.beta %}
 
 If your workflow fails with `Error: "No source code was seen during the build"` or `The process '/opt/hostedtoolcache/CodeQL/0.0.0-20200630/x64/codeql/codeql' failed with exit code 32`, this indicates that {% data variables.product.prodname_codeql %} was unable to monitor your code. There are six possible reasons for this:
 
@@ -26,7 +23,7 @@ If your workflow fails with `Error: "No source code was seen during the build"` 
      matrix:
        # Override automatic language detection by changing the list below.
        # Supported options are listed in a comment in the default workflow.
-       language: ['go', 'javascript']
+       language: ['go', {% ifversion codeql-language-identifiers-311 %}'javascript-typescript'{% else %}'javascript' {% endif %}]
    ```
 
    For more information, see the workflow extract in "[AUTOTITLE](/code-security/code-scanning/troubleshooting-code-scanning/some-languages-were-not-analyzed)".

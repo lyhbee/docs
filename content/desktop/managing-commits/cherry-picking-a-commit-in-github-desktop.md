@@ -1,6 +1,6 @@
 ---
 title: Cherry-picking a commit in GitHub Desktop
-shortTitle: Cherry-picking
+shortTitle: Cherry-picking a commit
 intro: 'You can use {% data variables.product.prodname_desktop %} to pick a specific commit on one branch and copy the commit to another branch.'
 versions:
   feature: desktop
@@ -41,6 +41,9 @@ You can also use cherry-picking when collaborating with a team. Some projects in
 
    ![Screenshot of the "History" tab and the "Current Branch" dropdown view. The cursor hovers over the "my-feature" branch, and "plus one" icons indicate the addition of one commit.](/assets/images/help/desktop/cherry-picking.png)
 
+1. The current branch changes to the branch onto which you cherry-picked the commit. You can now push the cherry-picked commit to the remote repository.
+
 ## Further reading
 
 - [git-cherry-pick](https://git-scm.com/docs/git-cherry-pick) in the Git documentation
+- "[AUTOTITLE](/desktop/managing-commits/options-for-managing-commits-in-github-desktop)"

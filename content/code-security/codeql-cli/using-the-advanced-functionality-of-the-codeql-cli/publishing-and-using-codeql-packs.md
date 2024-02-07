@@ -13,8 +13,6 @@ redirect_from:
   - /code-security/codeql-cli/using-the-codeql-cli/publishing-and-using-codeql-packs
 ---
 
-{% data reusables.codeql-cli.codeql-site-migration-note %}
-
 {% data reusables.codeql-cli.beta-note-package-management %}
 
 ## Configuring the `qlpack.yml` file before publishing
@@ -240,6 +238,10 @@ The following properties are supported in `qlpack.yml` files.
     codeql/cpp-all: ^0.0.2
   ```
 
+  If you are unsure or it does not matter which version should be used, then you can use `"*"`, which indicates that any version of this dependency is compatible with this pack. In practice, this will usually resolve to the highest published version of the dependency.
+
+  There is a special version placeholder, `${workspace}`, which indicates that this {% data variables.product.prodname_codeql %} pack depends on whatever version of the dependency is in the same workspace. For more information, see "[AUTOTITLE](/code-security/codeql-cli/using-the-advanced-functionality-of-the-codeql-cli/about-codeql-workspaces#using-workspace-as-a-version-range-in-qlpackyml-files)."
+
 #### `defaultSuiteFile`
 
 - Required by packs that export a set of default queries to run.
@@ -320,7 +322,7 @@ The following properties are supported in `qlpack.yml` files.
 - Defines the {% data variables.product.prodname_codeql %} language extractor to use when running the {% data variables.product.prodname_codeql %} tests in the pack. For more information about testing queries, see "[AUTOTITLE](/code-security/codeql-cli/using-the-advanced-functionality-of-the-codeql-cli/testing-custom-queries)." For example:
 
   ```yaml
-  extractor: javascript
+  extractor: {% ifversion codeql-language-identifiers-311 %}javascript-typescript{% else %}javascript{% endif %}
   ```
 
 #### `authors`
@@ -417,7 +419,7 @@ In most cases, the `codeql-pack.lock.yml` file is only relevant for query packs 
 
 ## Examples of custom {% data variables.product.prodname_codeql %} packs
 
-When you write custom queries or tests, you should save them in custom {% data variables.product.prodname_codeql %} packs. For simplicity, try to organize each pack logically. For more information, see "[{% data variables.product.prodname_codeql %} pack structure](#codeql-pack-structure)." Save files for queries and tests in separate packs and, where possible, organize custom packs into specific folders for each target language. This is particularly useful if you intend to publish your {% data variables.product.prodname_codeql %} packs so they can be shared with others or used in code scanning. For more information, see "[AUTOTITLE](/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql)."
+When you write custom queries or tests, you should save them in custom {% data variables.product.prodname_codeql %} packs. For simplicity, try to organize each pack logically. For more information, see "[AUTOTITLE](/code-security/codeql-cli/using-the-advanced-functionality-of-the-codeql-cli/creating-and-working-with-codeql-packs#codeql-pack-structure)." Save files for queries and tests in separate packs and, where possible, organize custom packs into specific folders for each target language. This is particularly useful if you intend to publish your {% data variables.product.prodname_codeql %} packs so they can be shared with others or used in code scanning. For more information, see "[AUTOTITLE](/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql)."
 
 ### {% data variables.product.prodname_codeql %} packs for custom libraries
 

@@ -11,10 +11,9 @@ redirect_from:
 versions:
   fpt: '*'
   ghes: '*'
-  ghae: '*'
   ghec: '*'
 ---
- 
+
 {% data reusables.actions.enterprise-github-hosted-runners %}
 
 ## About contexts
@@ -54,7 +53,7 @@ As part of an expression, you can access context information using one of two sy
 
 In order to use property dereference syntax, the property name must start with a letter or `_` and contain only alphanumeric characters, `-`, or `_`.
 
-If you attempt to dereference a non-existent property, it will evaluate to an empty string.
+If you attempt to dereference a nonexistent property, it will evaluate to an empty string.
 
 ### Determining when to use contexts
 
@@ -185,8 +184,8 @@ The `github` context contains information about the workflow run and the event t
 | `github` | `object` | The top-level context available during any job or step in a workflow. This object contains all the properties listed below. |
 | `github.action` | `string` | The name of the action currently running, or the [`id`](/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsid) of a step. {% data variables.product.prodname_dotcom %} removes special characters, and uses the name `__run` when the current step runs a script without an `id`. If you use the same action more than once in the same job, the name will include a suffix with the sequence number with underscore before it. For example, the first script you run will have the name `__run`, and the second script will be named `__run_2`. Similarly, the second invocation of `actions/checkout` will be `actionscheckout2`. |
 | `github.action_path` | `string` | The path where an action is located. This property is only supported in composite actions. You can use this path to access files located in the same repository as the action, for example by changing directories to the path: {% raw %} `cd ${{ github.action_path }}` {% endraw %}. |
-| `github.action_ref` | `string` | For a step executing an action, this is the ref of the action being executed. For example, `v2`. |
-| `github.action_repository` | `string` | For a step executing an action, this is the owner and repository name of the action. For example, `actions/checkout`. |
+| `github.action_ref` | `string` | For a step executing an action, this is the ref of the action being executed. For example, `v2`.<br><br>{% data reusables.actions.composite-actions-unsupported-refs %} |
+| `github.action_repository` | `string` | For a step executing an action, this is the owner and repository name of the action. For example, `actions/checkout`.<br><br>{% data reusables.actions.composite-actions-unsupported-refs %} |
 | `github.action_status` | `string` | For a composite action, the current result of the composite action. |
 | `github.actor` | `string` | {% ifversion actions-stable-actor-ids %}The username of the user that triggered the initial workflow run. If the workflow run is a re-run, this value may differ from `github.triggering_actor`. Any workflow re-runs will use the privileges of `github.actor`, even if the actor initiating the re-run (`github.triggering_actor`) has different privileges.{% else %}The username of the user that initiated the workflow run.{% endif %} |
 {%- ifversion actions-oidc-custom-claims %}
@@ -201,9 +200,6 @@ The `github` context contains information about the workflow run and the event t
 | `github.graphql_url` | `string` | The URL of the {% data variables.product.prodname_dotcom %} GraphQL API. |
 | `github.head_ref` | `string` | The `head_ref` or source branch of the pull request in a workflow run. This property is only available when the event that triggers a workflow run is either `pull_request` or `pull_request_target`. |
 | `github.job` | `string` | The [`job_id`](/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_id) of the current job. <br /> Note: This context property is set by the Actions runner, and is only available within the execution `steps` of a job. Otherwise, the value of this property will be `null`. |
-{%- ifversion actions-oidc-custom-claims %}
-| `github.job_workflow_sha` | `string` | {% data reusables.actions.job-workflow-sha-description %} |
-{%- endif %}
 | `github.path` | `string` | Path on the runner to the file that sets system `PATH` variables from workflow commands. This file is unique to the current step and is a different file for each step in a job. For more information, see "[AUTOTITLE](/actions/using-workflows/workflow-commands-for-github-actions#adding-a-system-path)." |
 | `github.ref` | `string` | {% data reusables.actions.ref-description %} |
 | `github.ref_name` | `string` | {% data reusables.actions.ref_name-description %} |
@@ -226,7 +222,7 @@ The `github` context contains information about the workflow run and the event t
 | `github.server_url` | `string` | The URL of the GitHub server. For example: `https://github.com`. |
 | `github.sha` | `string` | {% data reusables.actions.github_sha_description %} |
 | `github.token` | `string` | A token to authenticate on behalf of the GitHub App installed on your repository. This is functionally equivalent to the `GITHUB_TOKEN` secret. For more information, see "[AUTOTITLE](/actions/security-guides/automatic-token-authentication)."  <br /> Note: This context property is set by the Actions runner, and is only available within the execution `steps` of a job. Otherwise, the value of this property will be `null`. |{% ifversion actions-stable-actor-ids %}
-| `github.triggering_actor` | `string` | The username of the user that initiated the workflow run. If the workflow run is a re-run, this value may differ from `github.actor`. Any workflow re-runs will use the privileges of `github.actor`, even if the actor initiating the re-run (`github.triggering_actor`) has different privileges. |{% endif %}
+| `github.triggering_actor` | `string` | {% data reusables.actions.github-triggering-actor-description %} |{% endif %}
 | `github.workflow` | `string` | The name of the workflow. If the workflow file doesn't specify a `name`, the value of this property is the full path of the workflow file in the repository. |
 {%- ifversion actions-oidc-custom-claims %}
 | `github.workflow_ref` | `string` | {% data reusables.actions.workflow-ref-description %} |
@@ -591,7 +587,7 @@ The `runner` context contains information about the runner that is executing the
 | `runner.os` | `string` | {% data reusables.actions.runner-os-description %} |{% ifversion actions-runner-arch-envvars %}
 | `runner.arch` | `string` | {% data reusables.actions.runner-arch-description %} |{% endif %}
 | `runner.temp` | `string` | {% data reusables.actions.runner-temp-directory-description %} |
-| `runner.tool_cache` | `string` | {% ifversion ghae %}{% data reusables.actions.self-hosted-runners-software %} {% else %} {% data reusables.actions.runner-tool-cache-description %} {% endif %}|
+| `runner.tool_cache` | `string` | {% data reusables.actions.runner-tool-cache-description %} |
 | `runner.debug` | `string` | {% data reusables.actions.runner-debug-description %} |
 
 {%- comment %}
@@ -679,7 +675,7 @@ For workflows with a matrix, the `strategy` context contains information about t
 | Property name | Type | Description |
 |---------------|------|-------------|
 | `strategy` | `object` | This context changes for each job in a workflow run. You can access this context from any job or step in a workflow. This object contains all the properties listed below. |
-| `strategy.fail-fast` | `boolean` | When `true`, all in-progress jobs are canceled if any job in a matrix fails. For more information, see "[AUTOTITLE](/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstrategyfail-fast)." |
+| `strategy.fail-fast` | `boolean` | When this evaluates to `true`, all in-progress jobs are canceled if any job in a matrix fails. For more information, see "[AUTOTITLE](/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstrategyfail-fast)." |
 | `strategy.job-index` | `number` | The index of the current job in the matrix. **Note:** This number is a zero-based number. The first job's index in the matrix is `0`. |
 | `strategy.job-total` | `number` | The total number of jobs in the matrix. **Note:** This number **is not** a zero-based number. For example, for a matrix with four jobs, the value of `job-total` is `4`. |
 | `strategy.max-parallel` | `number` | The maximum number of jobs that can run simultaneously when using a `matrix` job strategy. For more information, see "[AUTOTITLE](/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstrategymax-parallel)." |
